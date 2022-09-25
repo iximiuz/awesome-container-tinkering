@@ -21,7 +21,7 @@ The project is WIP, and the current list of categories includes:
 
 ## Audience
 
-Everyone should be able to find something useful here, but to take the most out of it you'd probably need some prior familiarity with Docker (or alike):
+Everyone should be able to find something useful here, but to get the most out of it you'd probably need some prior familiarity with Docker (or alike). Potential target audience:
 
 - Infrastructure folks (DevOps, SREs, System Administrators)
 - Developers of Cloud Native tools
@@ -29,7 +29,7 @@ Everyone should be able to find something useful here, but to take the most out 
 
 ## Motivation
 
-Over the years, I've accumulated tens of links to various container-related projects, so, first of all, I just need a place for a brain-dump. But also to share, to get feedback, and to learn more about the topic from the community. Sharing is caring!
+Over the years, I've accumulated tens of links to various container-related projects, so, first of all, I just needed a place for a brain dump. But also to share, to get feedback, and to learn more about the tools from the community. Sharing is caring!
 
 ## Contribution
 
