@@ -29,9 +29,9 @@ Partially systematized. Eventually, will include some commentary.
 
 <a href="https://github.com/nestybox/sysbox">sysbox</a> - "An open-source, next-generation "runc" that empowers rootless containers to run workloads such as Systemd, Docker, Kubernetes, just like VMs." Started as an independent project but was <a href="https://www.docker.com/blog/docker-advances-container-isolation-and-workloads-with-acquisition-of-nestybox/">acquired by Docker Inc. in May 2022</a>.
 
-### gvisor
+### gVisor
 
-<a href="https://github.com/google/gvisor"></a> - "Application Kernel for Containers." gVisor is an application kernel, written in Go, that implements a substantial portion of the Linux system surface. It includes an Open Container Initiative (OCI) runtime called runsc that provides an isolation boundary between the application and the host kernel. The runsc runtime integrates with Docker and Kubernetes, making it simple to run sandboxed containers.
+<a href="https://github.com/google/gvisor">gVisor</a> - "Application Kernel for Containers." gVisor is an application kernel, written in Go, that implements a substantial portion of the Linux system surface. It includes an Open Container Initiative (OCI) runtime called runsc that provides an isolation boundary between the application and the host kernel. The runsc runtime integrates with Docker and Kubernetes, making it simple to run sandboxed containers.
 
 ### Firecracker
 
@@ -75,7 +75,7 @@ A piece of software that sits in between a low-level container runtime and a hig
 
 ### firecracker-containerd
 
-<a href="https://github.com/firecracker-microvm/firecracker-containerd"></a> - "firecracker-containerd enables containerd to manage containers as Firecracker microVMs."
+<a href="https://github.com/firecracker-microvm/firecracker-containerd">firecracker-containerd</a> - "enables containerd to manage containers as Firecracker microVMs."
 
 ### cri-o
 
@@ -98,7 +98,7 @@ A piece of software that sits in between a low-level container runtime and a hig
 
 ### Moby (Docker)
 
-<a href="https://github.com/moby/moby"> - "A collaborative project for the container ecosystem to assemble container-based systems." Docker lives somewhere here.
+<a href="https://github.com/moby/moby">Moby</a> - "A collaborative project for the container ecosystem to assemble container-based systems." Docker lives somewhere here.
 
 ### Docker Compose
 
