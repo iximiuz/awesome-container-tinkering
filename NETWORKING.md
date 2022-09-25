@@ -1,13 +1,17 @@
 # Container Networking Tools
 
-## https://github.com/containernetworking/cni
+### CNI
 
-## https://github.com/containernetworking/plugins
+<a href="https://github.com/containernetworking/cni">containernetworking/cni</a> - "Container Network Interface - networking for Linux containers."
 
-## slirp4netns
+### CNI plugins
 
-https://github.com/rootless-containers/slirp4netns User-mode networking for unprivileged network namespaces
+<a href="https://github.com/containernetworking/plugins">containernetworking/plugins</a> - "Some reference and example networking plugins, maintained by the CNI team."
 
-## netavark: A container network stack
+### slirp4netns
 
-https://github.com/containers/netavark
+<a href="https://github.com/rootless-containers/slirp4netns">slirp4netns</a> - "User-mode networking for unprivileged network namespaces."
+
+### netavark
+
+<a href="https://github.com/containers/netavark">netavark</a> - "A container network stack."

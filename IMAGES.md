@@ -34,12 +34,8 @@
 
 <a href="https://github.com/chainguard-dev/melange">melange</a> - "Build APKs from source code". A complimentary tool for apko.
 
-### DockerSlim
 
-<a href="https://github.com/docker-slim/docker-slim">DockerSlim</a> - "Don't change anything in your Docker container image and minify it by up to 30x (and for compiled languages even more)."
-
-
-## Image edit & copy
+## Image Edit & Copy
 
 ### skopeo
 
@@ -49,24 +45,43 @@
 
 <a href="https://github.com/opencontainers/umoci">umoci</a> - "umoci modifies Open Container images."
 
-### go-containerregistry
+### go-containerregistry/crane
 
-<a href="https://github.com/google/go-containerregistry">go-containerregistry/</a> - "Go library and CLIs for working with container registries."
+<a href="https://github.com/google/go-containerregistry/blob/main/cmd/crane/README.md">crane</a> - "A tool for interacting with remote images and registries."
+
+### go-containerregistry/krane
+
+<a href="https://github.com/google/go-containerregistry/blob/main/cmd/krane/README.md">krane</a> - "A drop-in replacement for crane that supports common Kubernetes-based workload identity mechanisms."
 
 
 ## Image Inspection Tools
 
 ### dive
 
+<a href="https://github.com/wagoodman/dive">dive</a> - "A tool for exploring each layer in a docker image."
+
 ### container-diff
+
+<a href="https://github.com/GoogleContainerTools/container-diff">container-diff</a> - "Diff your Docker containers."
+
+
+## Image Optimization
+
+### DockerSlim
+
+<a href="https://github.com/docker-slim/docker-slim">DockerSlim</a> - "Don't change anything in your Docker container image and minify it by up to 30x (and for compiled languages even more)."
 
 
 ## Libraries
 
 ### go-containerregistry
 
-<a href="https://github.com/google/go-containerregistry">go-containerregistry</a> - "Go library and CLIs for working with container registries."
+<a href="https://github.com/google/go-containerregistry">go-containerregistry</a> - "Go library for working with container registries."
 
 ### image
 
+<a href="https://github.com/containers/image">image</a> - "A set of Go libraries aimed at working in various way with containers' images and container image registries (pull, push, inspect w/o pulling, translate from one image format to another)." skopeo is backed by this library.
+
 ### storage
+
+<a href="https://github.com/containers/storage">storage</a> - "A Go library which aims to provide methods for storing filesystem layers, container images, and containers" (with a CLI included).

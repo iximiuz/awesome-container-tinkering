@@ -2,24 +2,30 @@
 
 Solutions to run containers locally and remotely.
 
-## Docker Desktop
+### Docker Desktop
 
-## Podman Desktop
+<a href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a> - "The fastest way to containerize applications."
 
-https://github.com/containers/podman-desktop - Manage Podman and other container engines from a single UI and tray
+### Podman Desktop
 
-## Rancher Desktop
+<a href="https://github.com/containers/podman-desktop">Podman Desktop</a> - "Manage Podman and other container engines from a single UI and tray."
 
-https://github.com/rancher-sandbox/rancher-desktop/ - Container Management and Kubernetes on the Desktop
+### Rancher Desktop
 
-## Lima: Linux virtual machines (on macOS, in most cases)
+<a href="https://github.com/rancher-sandbox/rancher-desktop/">Rancher Desktop</a> - "Container Management and Kubernetes on the Desktop."
 
-https://github.com/lima-vm/lima Linux virtual machines, typically on macOS, for running containerd
+### Lima
 
-## Colima - container runtimes on macOS (and Linux) with minimal setup
+<a href="https://github.com/lima-vm/lima">Lima</a> - "Linux virtual machines, typically on macOS, for running containerd."
+
+### Colima
+
+<a href="https://github.com/abiosoft/colima">Colima</a> - "Container runtimes on macOS (and Linux) with minimal setup."
 
 ### nerdctl
 
-https://github.com/abiosoft/colima - Container runtimes on macOS (and Linux) with minimal setup
+<a href="https://github.com/containerd/nerdctl">nerdctl</a> - "contaiNERD CTL - Docker-compatible CLI for containerd, with support for Compose, Rootless, eStargz, OCIcrypt, IPFS, ..."
 
-## minikube
+### minikube
+
+<a href="https://github.com/kubernetes/minikube">minikube</a> - "Run Kubernetes locally." But there is more to it than just that :)
