@@ -22,6 +22,22 @@ https://github.com/uber-archive/makisu
 
 ### apko & melange
 
+### DockerSlim
+
+https://github.com/docker-slim/docker-slim
+
+
+## Image edit & copy
+
+### skopeo
+
+https://github.com/containers/skopeo
+
+### umoci
+
+https://github.com/opencontainers/umoci - umoci modifies Open Container images
+
+
 ## Image Inspection Tools
 
 ### dive
