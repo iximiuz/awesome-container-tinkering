@@ -1,5 +1,15 @@
 # Tools To Deal With Container Images
 
+## Base images
+
+### Distroless 1.0
+
+<a href="https://github.com/GoogleContainerTools/distroless">distroless</a> - "Language focused docker images, minus the operating system" _aka_ "scratch for everyone else." Read <a href="https://iximiuz.com/en/posts/containers-distroless-images/">my overview of the distroless project on iximiuz.com</a>.
+
+### Chainguard Images
+
+<a href="https://github.com/chainguard-images">Chainguard Images</a> - "A collection of container (OCI) images designed for minimalism and security." Many of them are distroless and contain only an application and its runtime dependencies. Typically, there is no shell or package manager. Images building procedure is designed to be reproducible and declarative (see **apko** and **melange** below).
+
 ## Image Build Tools
 
 ### ⭐ BuildKit
@@ -36,11 +46,15 @@
 
 ### apko
 
-<a href="https://github.com/chainguard-dev/apko">apko</a> - "Build OCI images using APK directly without Dockerfile."
+<a href="https://github.com/chainguard-dev/apko">apko</a> - "Build OCI images using APK directly without Dockerfile." A tool to produce minimalistic container images that include only the needed packages.
 
 ### melange
 
 <a href="https://github.com/chainguard-dev/melange">melange</a> - "Build APKs from source code". A complimentary tool for apko.
+
+### Chisel
+
+<a href="https://github.com/canonical/chisel">Chisel</a> - an early-day project by Canonical. Similar idea to **apko** and **melange** but on top of the Ubuntu base. Read this <a href="https://devblogs.microsoft.com/dotnet/dotnet-6-is-now-in-ubuntu-2204/">Microsoft devblog article about large(r) scale application of Chisel for producing _.NET on Ubuntu_ images</a>.
 
 ### Nixery
 
@@ -48,7 +62,7 @@
 
 ### Devbox
 
-<a href="https://github.com/jetpack-io/devbox">Devbox</a> - "Instant, easy, predictable shells and containers." Devbox is a command-line tool that lets you create isolated shells and containers. You start by defining the list of packages required by your development environment, and Devbox uses that definition to create an isolated environment just for your application. You can use it right away, or turn it into a OCI container image. No Dockerfiles are involved.
+<a href="https://github.com/jetpack-io/devbox">Devbox</a> - "Instant, easy, predictable shells and containers." Devbox is a command-line tool that lets you create isolated shells and containers. You start by defining the list of packages required by your development environment, and Devbox uses that definition to create an isolated environment just for your application. You can use it right away, or turn it into a OCI container image. No Dockerfiles are involved. Powered by Nix.
 
 ### buildg
 
