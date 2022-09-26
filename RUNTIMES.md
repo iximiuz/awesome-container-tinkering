@@ -81,13 +81,13 @@ A piece of software that sits in between a low-level container runtime and a hig
 
 <a href="https://github.com/cri-o/cri-o">cri-o</a> - "Open Container Initiative-based implementation of Kubernetes Container Runtime Interface."
 
-### lxc
+### LXC
 
-<a href="https://github.com/lxc/lxc">lxc</a> - "Linux Containers."
+<a href="https://github.com/lxc/lxc">LXC</a> - "Linux Containers." An alternative (i.e., non-OCI) implementation of containers using Linux OS-level virtualization primitives (namespaces, cgroups, etc). Daemonless, can work as a library or as a CLI tool. Back in 2013, Docker started as UX a layer on top of LXC but eventually moved to its own implementation (known as **runc** nowadays). Read this <a href="https://lwn.net/Articles/907613/">alternative story of containers on LWN.net for more</a>.
 
-### lxd
+### LXD
 
-<a href="https://github.com/lxc/lxd">lxd</a> - "Powerful system container and virtual machine manager."
+<a href="https://github.com/lxc/lxd">LXD</a> - "Powerful system container and virtual machine manager." A daughter project of LCX. Like the Docker daemon, LXD is a daemon providing HTTP API to manage containers powered by LXC. LXD comes with a CLI client called _lxc_ (not to be confused with LXC's own CLI clients, though).
 
 ### 🪦 rkt
 
@@ -102,7 +102,7 @@ A piece of software that sits in between a low-level container runtime and a hig
 
 ### Docker Compose
 
-<a href="https://github.com/docker/compose">compose</a> - "Define and run multi-container applications with Docker"
+<a href="https://github.com/docker/compose">compose</a> - "Define and run multi-container applications with Docker."
 
 ### Podman
 

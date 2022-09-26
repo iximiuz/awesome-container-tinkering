@@ -11,7 +11,7 @@ Not an [awesome-docker](https://github.com/veggiemonk/awesome-docker) list. Inst
 - Helper tools and libraries to inspect, edit, or move images
 - In-depth write-ups and video resources on the above.
 
-The project is WIP, and the current list of categories includes:
+The project is WIP. The current list of categories includes:
 
 - [Container runtimes](./RUNTIMES.md)
 - [Image builders, viewers, editors](./IMAGES.md)
