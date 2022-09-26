@@ -30,6 +30,10 @@
 
 <a href="https://github.com/GoogleContainerTools/jib">Jib</a> - "Build container images for your Java applications."
 
+### Packer
+
+<a href="https://github.com/hashicorp/packer">Packer</a> - "A tool for creating identical machine images for multiple platforms from a single source configuration." Packer is primarily focused on producing virtual machine images but it also allows building Docker, LXC, and LXD images using a similar to VM-provisioning procedure (read, by putting shell commands into a HCL file).
+
 ### apko
 
 <a href="https://github.com/chainguard-dev/apko">apko</a> - "Build OCI images using APK directly without Dockerfile."
@@ -37,6 +41,10 @@
 ### melange
 
 <a href="https://github.com/chainguard-dev/melange">melange</a> - "Build APKs from source code". A complimentary tool for apko.
+
+### buildg
+
+<a href="https://github.com/ktock/buildg">buildg</a> - "Interactive debugger for Dockerfile, with support for IDEs (VS Code, Emacs, Neovim, etc)."
 
 
 ## Image Edit & Copy
