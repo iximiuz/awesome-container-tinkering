@@ -44,7 +44,11 @@
 
 ### Nixery
 
-<a href="https://github.com/tazjin/nixery"></a> - "Docker images on the fly with Nix". A Docker-compatible container registry that transparently builds images using the Nix package manager.
+<a href="https://github.com/tazjin/nixery">Nixery</a> - "Docker images on the fly with Nix". A Docker-compatible container registry that transparently builds images using the Nix package manager.
+
+### Devbox
+
+<a href="https://github.com/jetpack-io/devbox">Devbox</a> - "Instant, easy, predictable shells and containers." Devbox is a command-line tool that lets you create isolated shells and containers. You start by defining the list of packages required by your development environment, and Devbox uses that definition to create an isolated environment just for your application. You can use it right away, or turn it into a OCI container image. No Dockerfiles are involved.
 
 ### buildg
 
