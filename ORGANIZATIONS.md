@@ -26,4 +26,8 @@
 
 ## rootless-containers
 
-<a href="https://github.com/rootless-containers">rootless-containers</a> "Bringing rootless containers to the masses."
+<a href="https://github.com/rootless-containers">rootless-containers</a> - "Bringing rootless containers to the masses."
+
+## CNI
+
+<a href="https://github.com/containernetworking">CNI</a> is home for the CNI specification and various networking plugins.

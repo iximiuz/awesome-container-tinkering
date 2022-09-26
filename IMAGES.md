@@ -42,6 +42,10 @@
 
 <a href="https://github.com/chainguard-dev/melange">melange</a> - "Build APKs from source code". A complimentary tool for apko.
 
+### Nixery
+
+<a href="https://github.com/tazjin/nixery"></a> - "Docker images on the fly with Nix". A Docker-compatible container registry that transparently builds images using the Nix package manager.
+
 ### buildg
 
 <a href="https://github.com/ktock/buildg">buildg</a> - "Interactive debugger for Dockerfile, with support for IDEs (VS Code, Emacs, Neovim, etc)."
