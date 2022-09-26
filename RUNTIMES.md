@@ -41,6 +41,14 @@ Partially systematized. Eventually, will include some commentary.
 
 <a href="https://github.com/kata-containers/kata-containers">Kata Containers</a> - "An open source project and community working to build a standard implementation of lightweight Virtual Machines (VMs) that feel and perform like containers, but provide the workload isolation and security advantages of VMs."
 
+### libkrun
+
+<a href="https://github.com/containers/libkrun">libkrun</a> - "A dynamic library providing Virtualization-based process isolation capabilities." Can be used for adding VM-isolation capabilities to an OCI runtime like runc, crun, etc.
+
+### footloose
+
+<a href="https://github.com/weaveworks/footloose">footloose</a> - "Container Machines - Containers that look like Virtual Machines." hose containers run systemd as PID 1 and a ssh daemon that can be used to login into the container. Such "machines" behave very much like a VM, it's even possible to run dockerd in them.
+
 ### bubblewrap
 
 <a href="https://github.com/containers/bubblewrap">bubblewrap</a> - "Unprivileged sandboxing tool."
@@ -54,17 +62,21 @@ Partially systematized. Eventually, will include some commentary.
 
 A piece of software that sits in between a low-level container runtime and a higher-level container runtime.
 
-## conmon
+### conmon
 
 <a href="https://github.com/containers/conmon">conmon</a> - "An OCI container runtime monitor."
 
-## conmon-rs
+### conmon-rs
 
 <a href="https://github.com/containers/conmon-rs">conmon-rs</a> - conmon, but in Rust.
 
-## containerd-runtime-shim
+### containerd-runtime-shim
 
 <a href="https://github.com/containerd/containerd/blob/main/runtime/v2/README.md">containerd-runtime-shim</a> - "A first class shim API [and a few implementations] for runtime authors to integrate with containerd."
+
+### 🎓 shimmy
+
+<a href="https://github.com/iximiuz/shimmy">shimmy</a> - a toy container runtime shim written for educational purposes. Part of the **conman** project.
 
 
 ## Mid-level container runtimes
@@ -77,9 +89,21 @@ A piece of software that sits in between a low-level container runtime and a hig
 
 <a href="https://github.com/firecracker-microvm/firecracker-containerd">firecracker-containerd</a> - "enables containerd to manage containers as Firecracker microVMs."
 
+### Flintlock
+
+<a href="https://github.com/weaveworks-liquidmetal/flintlock">Flintlock</a> - "Lock, Stock, and Two Smoking MicroVMs. Create and manage the lifecycle of MicroVMs backed by containerd." Create and manage the lifecycle of MicroVMs, backed by containerd.
+
+### Vorteil
+
+<a href="https://github.com/direktiv/vorteil">Vorteil</a> - "turn your applications and containers into micro virtual machines."
+
 ### cri-o
 
-<a href="https://github.com/cri-o/cri-o">cri-o</a> - "Open Container Initiative-based implementation of Kubernetes Container Runtime Interface."
+<a href="https://github.com/cri-o/cri-o">cri-o</a> - "Open Container Initiative-based implementation of Kubernetes Container Runtime Interface (CRI)."
+
+### virtlet
+
+<a href="https://github.com/Mirantis/virtlet">virtlet</a> - "Kubernetes CRI implementation for running VM workloads."
 
 ### LXC
 
@@ -92,6 +116,10 @@ A piece of software that sits in between a low-level container runtime and a hig
 ### 🪦 rkt
 
 <a href="https://github.com/rkt/rkt">rkt</a> - [discontinued] "rkt is a pod-native container engine for Linux. It is composable, secure, and built on standards."
+
+### 🎓 conman
+
+<a href="https://github.com/iximiuz/conman">conman</a> - a toy container manager written for educational purposes. <a href="https://iximiuz.com/en/series/implementing-container-manager/">Read more about the conman project on iximiuz.com</a>.
 
 
 ## High-level container runtimes
@@ -111,10 +139,10 @@ A piece of software that sits in between a low-level container runtime and a hig
 
 ## Misc
 
-### boker
+### 🎓 boker
 
 <a href="https://github.com/icy/bocker">icy/bocker</a> & <a href="https://github.com/p8952/bocker">p8952/bocker</a> - "Docker implemented in around 100 lines of bash."
 
-### contained.af
+### 🎓 contained.af
 
 <a href="https://github.com/genuinetools/contained.af">contained.af</a> - "A stupid game for learning about containers, capabilities, and syscalls."

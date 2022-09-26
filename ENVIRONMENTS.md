@@ -22,6 +22,10 @@ Solutions to run containers locally and remotely.
 
 <a href="https://github.com/abiosoft/colima">Colima</a> - "Container runtimes on macOS (and Linux) with minimal setup."
 
+### virt
+
+<a href="https://github.com/apinske/virt">virt</a> - "small Linux VM, ready to run containers, for macOS on ARM." Like Lima but for Podman and using the Apple Virtualization.framework instead of QEMU.
+
 ### nerdctl
 
 <a href="https://github.com/containerd/nerdctl">nerdctl</a> - "contaiNERD CTL - Docker-compatible CLI for containerd, with support for Compose, Rootless, eStargz, OCIcrypt, IPFS, ..."

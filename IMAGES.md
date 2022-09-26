@@ -32,6 +32,10 @@
 
 <a href="https://github.com/uber-archive/makisu">makisu</a> - [discontinued] "Fast and flexible Docker image building tool, works in unprivileged containerized environments like Mesos and Kubernetes."
 
+### ⚠️ img
+
+<a href="https://github.com/genuinetools/img">img</a> - "Standalone, daemon-less, unprivileged Dockerfile and OCI compatible container image builder." Might be abandoned.
+
 ### ko
 
 <a href="https://github.com/ko-build/ko">ko</a> - "Build and deploy Go applications on Kubernetes."
@@ -43,6 +47,10 @@
 ### Packer
 
 <a href="https://github.com/hashicorp/packer">Packer</a> - "A tool for creating identical machine images for multiple platforms from a single source configuration." Packer is primarily focused on producing virtual machine images but it also allows building Docker, LXC, and LXD images using a similar to VM-provisioning procedure (read, by putting shell commands into a HCL file).
+
+### Cloud Native Buildpacks
+
+<a href="https://github.com/buildpacks">Cloud Native Buildpacks</a> - "Transform your application source code into images that can run on any cloud."
 
 ### apko
 
@@ -99,7 +107,7 @@
 <a href="https://github.com/GoogleContainerTools/container-diff">container-diff</a> - "Diff your Docker containers."
 
 
-## Image Optimization
+## Image Optimization Tools
 
 ### DockerSlim
 

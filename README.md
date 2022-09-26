@@ -34,3 +34,10 @@ Over the years, I've accumulated tens of links to various container-related proj
 ## Contribution
 
 Contributions are more than welcome!
+
+## Related awesome lists
+
+- <a href="https://github.com/veggiemonk/awesome-docker">Awesome Docker</a> - a curated list of Docker resources and projects.
+- <a href="https://github.com/Friz-zy/awesome-linux-containers">Awesome Linux Containers</a> - a curated list of awesome Linux Containers frameworks, libraries and software.
+- <a href="https://github.com/tcnksm/awesome-container">Awesome Container</a> - not so awesome but complimentary.
+- <a href="https://github.com/pditommaso/awesome-containers">Awesome Containers</a> - also far from being awesome but still complimentary.
