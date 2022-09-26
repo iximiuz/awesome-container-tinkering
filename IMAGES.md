@@ -1,10 +1,14 @@
-# List of Container Image Build Tools
+# Tools To Deal With Container Images
 
 ## Image Build Tools
 
-### BuildKit
+### ⭐ BuildKit
 
 <a href="https://github.com/moby/buildkit">BuildKit</a> - "concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit."
+
+### ⭐ Docker buildx plugin
+
+<a href="https://github.com/docker/buildx">buildx</a> - "Docker CLI plugin for extended build capabilities with BuildKit." The plugin provides the familiar `docker build`-like UX but on top of a more powerful build engine (BuildKit). It also includes a tool called <a href="https://github.com/docker/buildx/blob/master/docs/reference/buildx_bake.md">bake</a> that allows building all the images in an application together and let the users define project specific reusable build flows. In other words, _bake_ is a container-aware _make_.
 
 ### Buildah
 
