@@ -95,6 +95,9 @@
 
 <a href="https://github.com/google/go-containerregistry/blob/main/cmd/krane/README.md">krane</a> - "A drop-in replacement for crane that supports common Kubernetes-based workload identity mechanisms."
 
+### OCI Registry Artifact Storage (ORAS)
+
+<a href="https://github.com/oras-project/oras">ORAS</a> - "Work with OCI registries, but for secure supply chain - managing content like artifacts, images, SBOM."
 
 ## Image Inspection Tools
 
