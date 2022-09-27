@@ -89,7 +89,7 @@
 
 ### go-containerregistry/crane
 
-<a href="https://github.com/google/go-containerregistry/blob/main/cmd/crane/README.md">crane</a> - "A tool for interacting with remote images and registries."
+<a href="https://github.com/google/go-containerregistry/blob/main/cmd/crane/README.md">crane</a> - "A tool for interacting with remote images and registries. You can try out a web version of crane [here](https://crane.ggcr.dev/)"
 
 ### go-containerregistry/krane
 
@@ -101,6 +101,10 @@
 ### dive
 
 <a href="https://github.com/wagoodman/dive">dive</a> - "A tool for exploring each layer in a docker image."
+
+### explore
+
+[explore](https://explore.ggcr.dev/) - "A tool for exploring the layers and filesystem of an image from the browser"
 
 ### container-diff
 
