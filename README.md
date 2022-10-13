@@ -18,6 +18,7 @@ The project is WIP. The current list of categories includes:
 - [Development environments](./ENVIRONMENTS.md)
 - [Container networking tools](./NETWORKING.md)
 - [Interesting GitHub organizations](./ORGANIZATIONS.md)
+- [Container Standards and Specifications](./SPECIFICATIONS.md)
 
 ## Audience
 
