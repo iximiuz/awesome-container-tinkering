@@ -4,13 +4,17 @@
 
 ### Distroless 1.0
 
-<a href="https://github.com/GoogleContainerTools/distroless">distroless</a> - "Language focused docker images, minus the operating system" _aka_ "scratch for everyone else." Read <a href="https://iximiuz.com/en/posts/containers-distroless-images/">my overview of the distroless project on iximiuz.com</a>.
+<a href="https://github.com/GoogleContainerTools/distroless">distroless</a> - "Language focused docker images, minus the operating system" _aka_ "scratch for everyone else." 
+
+Read <a href="https://iximiuz.com/en/posts/containers-distroless-images/">my overview of the distroless project on iximiuz.com</a>.
 
 ### Chainguard Images
 
-<a href="https://github.com/chainguard-images">Chainguard Images</a> - "A collection of container (OCI) images designed for minimalism and security." Many of them are distroless and contain only an application and its runtime dependencies. Typically, there is no shell or package manager. Images building procedure is designed to be reproducible and declarative (see **apko** and **melange** below).
+<a href="https://github.com/chainguard-images">Chainguard Images</a> - "A collection of container (OCI) images designed for minimalism and security."
 
-## Image Build Tools
+Many of them are distroless and contain only an application and its runtime dependencies. Typically, there is no shell or package manager. Image building procedure is designed to be reproducible and declarative (see **apko** and **melange** below).
+
+## Image Building
 
 ### ⭐ BuildKit
 
@@ -18,7 +22,9 @@
 
 ### ⭐ Docker buildx plugin
 
-<a href="https://github.com/docker/buildx">buildx</a> - "Docker CLI plugin for extended build capabilities with BuildKit." The plugin provides the familiar `docker build`-like UX but on top of a more powerful build engine (BuildKit). It also includes a tool called <a href="https://github.com/docker/buildx/blob/master/docs/reference/buildx_bake.md">bake</a> that allows building all the images in an application together and let the users define project specific reusable build flows. In other words, _bake_ is a container-aware _make_.
+<a href="https://github.com/docker/buildx">buildx</a> - "Docker CLI plugin for extended build capabilities with BuildKit."
+
+The plugin provides the familiar `docker build`-like UX but on top of a more powerful build engine (BuildKit). It also includes a tool called <a href="https://github.com/docker/buildx/blob/master/docs/reference/buildx_bake.md">bake</a> that allows building all the images in an application together and let the users define project specific reusable build flows. In other words, _bake_ is a container-aware _make_.
 
 ### Buildah
 
@@ -34,7 +40,7 @@
 
 ### ⚠️ img
 
-<a href="https://github.com/genuinetools/img">img</a> - "Standalone, daemon-less, unprivileged Dockerfile and OCI compatible container image builder." Might be abandoned.
+<a href="https://github.com/genuinetools/img">img</a> - "Standalone, daemon-less, unprivileged Dockerfile and OCI compatible container image builder." The project looks abandoned.
 
 ### ko
 
@@ -46,7 +52,9 @@
 
 ### Packer
 
-<a href="https://github.com/hashicorp/packer">Packer</a> - "A tool for creating identical machine images for multiple platforms from a single source configuration." Packer is primarily focused on producing virtual machine images but it also allows building Docker, LXC, and LXD images using a similar to VM-provisioning procedure (read, by putting shell commands into a HCL file).
+<a href="https://github.com/hashicorp/packer">Packer</a> - "A tool for creating identical machine images for multiple platforms from a single source configuration."
+
+Packer is primarily focused on producing virtual machine images but it also allows building Docker, LXC, and LXD images using a similar to VM-provisioning procedure (read, by putting shell commands into a HCL file).
 
 ### Cloud Native Buildpacks
 
@@ -70,22 +78,55 @@
 
 ### Devbox
 
-<a href="https://github.com/jetpack-io/devbox">Devbox</a> - "Instant, easy, predictable shells and containers." Devbox is a command-line tool that lets you create isolated shells and containers. You start by defining the list of packages required by your development environment, and Devbox uses that definition to create an isolated environment just for your application. You can use it right away, or turn it into a OCI container image. No Dockerfiles are involved. Powered by Nix.
+<a href="https://github.com/jetpack-io/devbox">Devbox</a> - "Instant, easy, predictable shells and containers."
+
+Devbox is a command-line tool that lets you create isolated shells and containers. You start by defining the list of packages required by your development environment, and Devbox uses that definition to create an isolated environment just for your application. You can use it right away, or turn it into a OCI container image. No Dockerfiles are involved. Powered by Nix.
 
 ### buildg
 
 <a href="https://github.com/ktock/buildg">buildg</a> - "Interactive debugger for Dockerfile, with support for IDEs (VS Code, Emacs, Neovim, etc)."
 
 
-## Image Edit & Copy
+## Image Inspection
 
-### skopeo
+### dive
 
-<a href="https://github.com/containers/skopeo">skopeo</a> - "Work with remote images registries - retrieving information, images, signing content."
+<a href="https://github.com/wagoodman/dive">dive</a> - "A tool for exploring each layer in a docker image."
+
+### container-diff
+
+<a href="https://github.com/GoogleContainerTools/container-diff">container-diff</a> - "Diff your Docker containers."
+
+### explore (SaaS)
+
+[explore](https://explore.ggcr.dev/) - "A tool for exploring the layers and filesystem of an image from the browser."
+
+
+## Image Editing
 
 ### umoci
 
 <a href="https://github.com/opencontainers/umoci">umoci</a> - "umoci modifies Open Container images."
+
+
+## Image Optimization
+
+### DockerSlim
+
+<a href="https://github.com/docker-slim/docker-slim">DockerSlim</a> - "Don't change anything in your Docker container image and minify it by up to 30x (and for compiled languages even more)."
+
+
+## Image Distribution
+
+### ⭐ Distribution
+
+<a href="https://github.com/distribution/distribution">Distribution</a> - "The toolkit to pack, ship, store, and deliver container content."
+
+An open-source registry implementation for storing and distributing container images using the OCI Distribution Specification with the goal to provide a simple, secure, and scalable base for building a large scale registry solution or running a simple private registry. Used by Docker Hub, GitHub Container Registry, GitLab Container Registry, DigitalOcean Container Registry, CNCF Harbor Project, VMware Harbor Registry, and more.
+
+### skopeo
+
+<a href="https://github.com/containers/skopeo">skopeo</a> - "Work with remote images registries - retrieving information, images, signing content."
 
 ### go-containerregistry/crane
 
@@ -97,28 +138,9 @@
 
 ### OCI Registry Artifact Storage (ORAS)
 
-<a href="https://github.com/oras-project/oras">ORAS</a> - "Work with OCI registries, but for secure supply chain - managing content like artifacts, images, SBOM."
+<a href="https://oras.land/">ORAS</a> - "Push and pull OCI Artifacts to and from OCI Registries."
 
-## Image Inspection Tools
-
-### dive
-
-<a href="https://github.com/wagoodman/dive">dive</a> - "A tool for exploring each layer in a docker image."
-
-### explore
-
-[explore](https://explore.ggcr.dev/) - "A tool for exploring the layers and filesystem of an image from the browser"
-
-### container-diff
-
-<a href="https://github.com/GoogleContainerTools/container-diff">container-diff</a> - "Diff your Docker containers."
-
-
-## Image Optimization Tools
-
-### DockerSlim
-
-<a href="https://github.com/docker-slim/docker-slim">DockerSlim</a> - "Don't change anything in your Docker container image and minify it by up to 30x (and for compiled languages even more)."
+Since the invention of OCI registries, people have been (ab)using them to store non-container things (Helm charts, OPA policies, even video files can be stored this way). The modern registries are evolving as generic artifact stores, and the ORAS project provides a way to push and pull OCI Artifacts (read _arbitrary files_) to and from OCI Registries. The project consists of a CLI (<a href="https://github.com/oras-project/oras">_oras_</a>) and libraries (<a href="https://github.com/oras-project/oras-go">Go</a>, <a href="https://github.com/oras-project/oras-py">Python</a>).
 
 
 ## Libraries
@@ -129,7 +151,9 @@
 
 ### image
 
-<a href="https://github.com/containers/image">image</a> - "A set of Go libraries aimed at working in various way with containers' images and container image registries (pull, push, inspect w/o pulling, translate from one image format to another)." skopeo is backed by this library.
+<a href="https://github.com/containers/image">image</a> - "A set of Go libraries aimed at working in various way with containers' images and container image registries (pull, push, inspect w/o pulling, translate from one image format to another)."
+
+skopeo is backed by this library.
 
 ### storage
 
