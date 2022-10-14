@@ -86,6 +86,10 @@ Devbox is a command-line tool that lets you create isolated shells and container
 
 <a href="https://github.com/ktock/buildg">buildg</a> - "Interactive debugger for Dockerfile, with support for IDEs (VS Code, Emacs, Neovim, etc)."
 
+### Binfmt
+
+<a href="https://github.com/tonistiigi/binfmt">Binfmt</a> - "Cross-platform emulator (QEMU) collection distributed with Docker images." A handy tool for cross-platform builds of all kinds.
+
 
 ## Image Inspection
 
