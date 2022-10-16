@@ -50,6 +50,12 @@ The plugin provides the familiar `docker build`-like UX but on top of a more pow
 
 <a href="https://github.com/GoogleContainerTools/jib">Jib</a> - "Build container images for your Java applications."
 
+### 👨‍🔬 kim
+
+<a href="https://github.com/rancher/kim">kim</a> - "The Kubernetes Image Manager."
+
+The tool consists of a builder backend (BuildKit daemon bound to the kubelet's underlying containerd socket) and a server-side agent (both deployed as one DaemonSet), and the _kim_ CLI (that talks to the agent) with a classic Docker-like UX for image management (push, pull, etc).
+
 ### Packer
 
 <a href="https://github.com/hashicorp/packer">Packer</a> - "A tool for creating identical machine images for multiple platforms from a single source configuration."
