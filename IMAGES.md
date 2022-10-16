@@ -96,6 +96,12 @@ Devbox is a command-line tool that lets you create isolated shells and container
 
 <a href="https://github.com/tonistiigi/binfmt">Binfmt</a> - "Cross-platform emulator (QEMU) collection distributed with Docker images." A handy tool for cross-platform builds of all kinds.
 
+### xx
+
+<a href="https://github.com/tonistiigi/xx">xx</a> - "Dockerfile cross-compilation helpers."
+
+A collection of tools to support cross-compilation from Dockerfiles that understand the `--platform` flag passed in from `docker build` or `docker buildx build`. These helpers allow you to build multi-platform images from any architecture into any architecture supported by your compiler with native performance. Adding `xx` to your Dockerfile should only need minimal updates and should not require custom conditions for specific architectures. Example: `apk add` becomes `xx-apk add`, `apt-get install` becomes `xx-apt-get install`, `go build` becomes `xx-go build`, etc.
+
 
 ## Image Inspection
 
