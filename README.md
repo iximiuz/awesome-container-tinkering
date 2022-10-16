@@ -32,6 +32,13 @@ Everyone should be able to find something useful here, but to get the most out o
 
 Over the years, I've accumulated tens of links to various container-related projects, so, first of all, I just needed a place for a brain dump. But also to share, to get feedback, and to learn more about the tools from the community. Sharing is caring!
 
+## Legend
+
+- ⭐ - widely-used/de facto standard solution
+- 👨‍🔬 - experimental project
+- ⚠️ - project looks abandoned/unmaintained
+- 🪦 - project has been officially discontinued
+
 ## Contribution
 
 Contributions are more than welcome!
