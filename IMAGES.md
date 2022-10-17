@@ -20,11 +20,23 @@ Many of them are distroless and contain only an application and its runtime depe
 
 <a href="https://github.com/moby/buildkit">BuildKit</a> - "concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit."
 
+A daemon that, in particular, powers the Docker image building. Uses its own intermediate language (LLB) to describe build tasks (but comes with a default frontend that compiles Dockerfiles to LLB). Can produce different forms of artifacts (Docker images, OCI images, tar archives, local files). Uses isolated builder backends (containers, remote servers, in-kubernetes builders, etc). Supports out-of-the-box cross-platform builds, different cache sources & destinations (inline, registry, local, etc). Check out this [good practical overview](https://blog.kubesimplify.com/the-secret-gems-behind-building-container-images-enter-buildkit-and-docker-buildx) for more.
+
 ### ⭐ Docker buildx plugin
 
 <a href="https://github.com/docker/buildx">buildx</a> - "Docker CLI plugin for extended build capabilities with BuildKit."
 
-The plugin provides the familiar `docker build`-like UX but on top of a more powerful build engine (BuildKit). It also includes a tool called <a href="https://github.com/docker/buildx/blob/master/docs/reference/buildx_bake.md">bake</a> that allows building all the images in an application together and let the users define project specific reusable build flows. In other words, _bake_ is a container-aware _make_.
+At first sight, the plugin is just another `docker build`-like command but on top of a better build engine (BuildKit). Often I'd just replace `docker build` with `docker buildx build` and call it a day. In actuality, though, `docker buildx` is the de facto standard CLI tool to access the full power of BuildKit. There is much more than just `docker buildx build` (see the list of BuildKit's capabilities above).
+
+### 👨‍ bake
+
+<a href="https://github.com/docker/buildx/blob/master/docs/reference/buildx_bake.md">bake</a> - container-aware _make_.
+
+This _buildx_ subcommand is worth mentioning separately:
+
+> BuildKit efficiently handles multiple concurrent build requests and de-duplicates work. The build commands can be combined with general-purpose command runners (for example, `make`). However, these tools generally invoke builds in sequence and therefore cannot leverage the full potential of BuildKit parallelization, or combine BuildKit's output for the user. For this use case, we have added a command called `docker buildx bake`.
+
+The `bake` command supports building images (<a href="https://iximiuz.ck.page/posts/container-tools-tips-and-tricks-issue-1">and not only</a>) from HCL or JSON files by describing _make_-like targets. And it also understands docker-compose YAML files.
 
 ### Buildah
 
@@ -56,7 +68,7 @@ The plugin provides the familiar `docker build`-like UX but on top of a more pow
 
 The tool consists of a builder backend (BuildKit daemon bound to the kubelet's underlying containerd socket) and a server-side agent (both deployed as one DaemonSet), and the _kim_ CLI (that talks to the agent) with a classic Docker-like UX for image management (push, pull, etc).
 
-### Packer
+### ⭐ Packer
 
 <a href="https://github.com/hashicorp/packer">Packer</a> - "A tool for creating identical machine images for multiple platforms from a single source configuration."
 
