@@ -47,5 +47,5 @@ Contributions are more than welcome!
 
 - <a href="https://github.com/veggiemonk/awesome-docker">Awesome Docker</a> - a curated list of Docker resources and projects.
 - <a href="https://github.com/Friz-zy/awesome-linux-containers">Awesome Linux Containers</a> - a curated list of awesome Linux Containers frameworks, libraries and software.
-- <a href="https://github.com/tcnksm/awesome-container">Awesome Container</a> - not so awesome but complimentary.
-- <a href="https://github.com/pditommaso/awesome-containers">Awesome Containers</a> - also far from being awesome but still complimentary.
+- <a href="https://github.com/tcnksm/awesome-container">Awesome Container</a> - slightly less awesome than the above but complimentary.
+- <a href="https://github.com/pditommaso/awesome-containers">Awesome Containers</a> - another complimentary list of resources.
