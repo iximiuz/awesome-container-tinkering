@@ -28,7 +28,7 @@ A daemon that, in particular, powers the Docker image building. Uses its own int
 
 At first sight, the plugin is just another `docker build`-like command but on top of a better build engine (BuildKit). Often I'd just replace `docker build` with `docker buildx build` and call it a day. In actuality, though, `docker buildx` is the de facto standard CLI tool to access the full power of BuildKit. There is much more than just `docker buildx build` (see the list of BuildKit's capabilities above).
 
-### 👨‍ bake
+### 🧑‍🔬 bake
 
 <a href="https://github.com/docker/buildx/blob/master/docs/reference/buildx_bake.md">bake</a> - container-aware _make_.
 
@@ -62,7 +62,7 @@ The `bake` command supports building images (<a href="https://iximiuz.ck.page/po
 
 <a href="https://github.com/GoogleContainerTools/jib">Jib</a> - "Build container images for your Java applications."
 
-### 👨‍🔬 kim
+### ⚠️ 👨‍🔬 kim
 
 <a href="https://github.com/rancher/kim">kim</a> - "The Kubernetes Image Manager."
 
