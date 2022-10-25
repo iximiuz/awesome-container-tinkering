@@ -164,6 +164,12 @@ An open-source registry implementation for storing and distributing container im
 
 <a href="https://github.com/google/go-containerregistry/blob/main/cmd/krane/README.md">krane</a> - "A drop-in replacement for crane that supports common Kubernetes-based workload identity mechanisms."
 
+### regclient
+
+<a href="https://github.com/regclient/regclient">regclient</a> - "Docker and OCI Registry Client in Go and tooling using those libraries."
+
+A client interface to interact with registries: inspect images w/o pulling, list repository's tags, list registry's repositories (if supported), efficiently copy images between repositories, import/export OCI and Docker images, etc. Seems to be written from scratch with just a few dependencies.
+
 ### OCI Registry Artifact Storage (ORAS)
 
 <a href="https://oras.land/">ORAS</a> - "Push and pull OCI Artifacts to and from OCI Registries."
