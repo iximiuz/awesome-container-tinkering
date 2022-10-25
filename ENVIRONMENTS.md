@@ -44,6 +44,6 @@ Despite the name, <a href="https://minikube.sigs.k8s.io/docs/faq/#can-i-start-mi
 
 ### Vagrant + VirtualBox + Docker provisioner
 
-<a href="https://github.com/hashicorp/vagrant">Vagrant</a> - "Vagrant is a tool for building and distributing development environments."
+<a href="https://github.com/hashicorp/vagrant">Vagrant</a> - "a tool for building and distributing development environments."
 
 Vagrant is many things, but in particular it can be used as a handy VirtualBox frontend. With just <a href="https://developer.hashicorp.com/vagrant/docs/provisioning/docker">about 5 lines of config</a>, you can get a local VM with Docker Engine inside. Works the same way on Linux, Windows, and macOS, but no `arm` support is possible. Read more - <a href="https://iximiuz.com/en/posts/how-to-setup-development-environment/">Disposable Local Development Environments with Vagrant, Docker, and Arkade</a>.
