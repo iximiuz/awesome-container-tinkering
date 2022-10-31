@@ -142,7 +142,32 @@ A piece of software that sits in between a low-level container runtime and a hig
 
 A Docker-like tool written in Python and using FreeBSD jails instead of Linux namespaces & co.
 
+
 ## Introspection and debugging tools
+
+### cdebug
+
+<a href="https://github.com/iximiuz/cdebug">cdebug</a> - "an experimental container debugger."
+
+The `cdebug exec` command is some sort of crossbreeding of `docker exec` and `kubectl debug` commands. You point the tool at a running container, say what toolkit image to use, and it starts a debugging "sidecar" container that feels like a regular `docker exec` session.
+
+### debug-ctr
+
+<a href="https://github.com/felipecruz91/debug-ctr">debug-ctr</a> - "Commandline tool for interactive container troubleshooting."
+
+A debugger that creates a new container out of the original container with the toolkit mounted in a volume.
+
+### docker-opener
+
+<a href="https://github.com/artemkaxboy/docker-opener">docker-opener</a> - "Shell-in to any docker container easily."
+
+A multi-purpose tool that in particular can run a shell session into your container (and if there is no shell inside, it'll bring its own busybox).
+
+### cntr
+
+<a href="https://github.com/Mic92/cntr">cntr</a> - "A container debugging tool based on FUSE."
+
+"A replacement for `docker exec` that brings all your developers tools with you" by mounting the file system from one container (or the host) into the target container and creating a nested container with the help of a FUSE filesystem. Supports a huge range of runtimes (docker, podman, LXC/LXD, rkt, systemd-nspawn, containerd) because it operates directly on the OS level.
 
 ### ⚠️ amicontained
 
