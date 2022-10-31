@@ -142,6 +142,12 @@ A piece of software that sits in between a low-level container runtime and a hig
 
 A Docker-like tool written in Python and using FreeBSD jails instead of Linux namespaces & co.
 
+## Introspection and debugging tools
+
+### ⚠️ amicontained
+
+<a href="https://github.com/genuinetools/amicontained">amicontained</a> - "Container introspection tool. Find out what container runtime is being used as well as features available."
+
 ## Misc
 
 ### 🎓 boker
