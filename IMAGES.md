@@ -176,6 +176,12 @@ A client interface to interact with registries: inspect images w/o pulling, list
 
 Since the invention of OCI registries, people have been (ab)using them to store non-container things (Helm charts, OPA policies, even video files can be stored this way). The modern registries are evolving as generic artifact stores, and the ORAS project provides a way to push and pull OCI Artifacts (read _arbitrary files_) to and from OCI Registries. The project consists of a CLI (<a href="https://github.com/oras-project/oras">_oras_</a>) and libraries (<a href="https://github.com/oras-project/oras-go">Go</a>, <a href="https://github.com/oras-project/oras-py">Python</a>).
 
+### 🧑‍🔬 Docker Hub Tool
+
+<a href="https://github.com/docker/hub-tool">Docker Hub Tool</a> - "Docker Hub experimental CLI tool."
+
+A CLI tool for interacting with the Docker Hub. Get information about your images from the terminal. Docker's experiment to build a Docker Hub CLI tool. The intention of this project is to get user feedback and then to add this functionality to the Docker CLI itself.
+
 
 ## Libraries
 
