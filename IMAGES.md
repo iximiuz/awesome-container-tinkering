@@ -125,6 +125,12 @@ A collection of tools to support cross-compilation from Dockerfiles that underst
 
 <a href="https://github.com/GoogleContainerTools/container-diff">container-diff</a> - "Diff your Docker containers."
 
+### 👨‍🔬 car
+
+<a href="https://github.com/tetratelabs/car">car</a> - "Like tar, but for containers!"
+
+Car lets you list or extract files from an OCI (possibly Docker) image, regardless of the platform it was built for. For example, you can extract files from a windows/amd64 image even if you are running linux/arm64.
+
 ### explore (SaaS)
 
 [explore](https://explore.ggcr.dev/) - "A tool for exploring the layers and filesystem of an image from the browser."
