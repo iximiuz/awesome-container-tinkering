@@ -147,15 +147,23 @@ A Docker-like tool written in Python and using FreeBSD jails instead of Linux na
 
 ### cdebug
 
-<a href="https://github.com/iximiuz/cdebug">cdebug</a> - "an experimental container debugger."
+<a href="https://github.com/iximiuz/cdebug">cdebug</a> - "a swiss army knife of container debugging."
 
-The `cdebug exec` command is some sort of crossbreeding of `docker exec` and `kubectl debug` commands. You point the tool at a running container, say what toolkit image to use, and it starts a debugging "sidecar" container that feels like a regular `docker exec` session.
+The `cdebug exec` command is a crossbreeding of `docker exec` and `kubectl debug` commands. You point the tool at a running container, say what toolkit image to use, and it starts a debugging "sidecar" container that feels like a regular `docker exec` session (i.e., shares most of the target container's namespaces and has the same rootfs).
+
+The `cdebug port-forward` command is another crossbreeding - this time it's `kubectl port-forward` and `ssh -L|-R`. With `cdebug port-forward -L` you can forward traffic destined to a host's port to an arbitrary container port even if it wasn't published or the target container is listening on localhost. With `cdebug port-forward -R` (coming soon) you can expose any endpoints accessible from your host back to the container' or Kubernetes network.
 
 ### debug-ctr
 
 <a href="https://github.com/felipecruz91/debug-ctr">debug-ctr</a> - "Commandline tool for interactive container troubleshooting."
 
 A debugger that creates a new container out of the original container with the toolkit mounted in a volume.
+
+### docker-debug
+
+<a href="https://github.com/zeromake/docker-debug">docker-debug</a> - "use new container attach on already container go on debug."
+
+Start a new container with an image of choice (`nicolaka/netshoot` by default) that shares (some of) the target container's namesapces. Much like `cdebug exec` but with no `chroot` magic and supports only Docker as a container runtime.
 
 ### docker-opener
 
