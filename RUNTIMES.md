@@ -177,6 +177,12 @@ A multi-purpose tool that in particular can run a shell session into your contai
 
 "A replacement for `docker exec` that brings all your developers tools with you" by mounting the file system from one container (or the host) into the target container and creating a nested container with the help of a FUSE filesystem. Supports a huge range of runtimes (docker, podman, LXC/LXD, rkt, systemd-nspawn, containerd) because it operates directly on the OS level.
 
+### 👨‍🔬 kdiag
+
+<a href="https://github.com/solo-io/kdiag">kdiag</a> - "Diagnostics and Debug Tooling" for Kubernetes workloads.
+
+A kubectl plugin to get shell access to scratch containers, stream logs from multiple pods simultaneously, and do reverse port forwarding to Kubernetes clusters.
+
 ### ⚠️ amicontained
 
 <a href="https://github.com/genuinetools/amicontained">amicontained</a> - "Container introspection tool. Find out what container runtime is being used as well as features available."
