@@ -36,6 +36,12 @@ Similar to Docker Desktop but with more focus on local Kubernetes clusters (alth
 
 <a href="https://github.com/containerd/nerdctl">nerdctl</a> - "contaiNERD CTL - Docker-compatible CLI for containerd, with support for Compose, Rootless, eStargz, OCIcrypt, IPFS, ..."
 
+### Finch
+
+<a href="https://github.com/runfinch/finch">Finch</a> - "an open source client for container development."
+
+A minimal native client plus an opinionated distribution of other open source components (nerdctl, containerd, BuildKit, Lima). "Finch aims to help promote other projects by making it easy to install and use them, while offering a simple native client to tie it all together."
+
 ### minikube
 
 <a href="https://github.com/kubernetes/minikube">minikube</a> - "Run Kubernetes locally."
