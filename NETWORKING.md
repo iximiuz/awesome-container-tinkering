@@ -15,3 +15,9 @@
 ### netavark
 
 <a href="https://github.com/containers/netavark">netavark</a> - "A container network stack."
+
+### ⚠️ pipework
+
+<a href="https://github.com/jpetazzo/pipework">pipework</a> - "Software-Defined Networking tools for LXC (LinuX Containers)."
+
+Pipework lets you connect together LXC and/or Docker containers in arbitrarily complex scenarios using cgroups and (network?) namespaces.
