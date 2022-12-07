@@ -58,27 +58,6 @@ Partially systematized. Eventually, will include some commentary.
 <a href="https://github.com/systemd/systemd/blob/main/src/nspawn/nspawn.c">systemd-nspawn</a> - "Like the chroot command, but it is a chroot on steroids." May be used to run a command or OS in a light-weight namespace container.
 
 
-## Container-runtime shims
-
-A piece of software that sits in between a low-level container runtime and a higher-level container runtime.
-
-### conmon
-
-<a href="https://github.com/containers/conmon">conmon</a> - "An OCI container runtime monitor."
-
-### conmon-rs
-
-<a href="https://github.com/containers/conmon-rs">conmon-rs</a> - conmon, but in Rust.
-
-### containerd-runtime-shim
-
-<a href="https://github.com/containerd/containerd/blob/main/runtime/v2/README.md">containerd-runtime-shim</a> - "A first class shim API [and a few implementations] for runtime authors to integrate with containerd."
-
-### 🎓 shimmy
-
-<a href="https://github.com/iximiuz/shimmy">shimmy</a> - a toy container runtime shim written for educational purposes. Part of the **conman** project.
-
-
 ## Mid-level container runtimes
 
 ### ⭐ containerd
@@ -143,6 +122,27 @@ A piece of software that sits in between a low-level container runtime and a hig
 A Docker-like tool written in Python and using FreeBSD jails instead of Linux namespaces & co.
 
 
+## Container-runtime shims
+
+A piece of software that sits in between a low-level container runtime and a higher-level container runtime.
+
+### conmon
+
+<a href="https://github.com/containers/conmon">conmon</a> - "An OCI container runtime monitor."
+
+### conmon-rs
+
+<a href="https://github.com/containers/conmon-rs">conmon-rs</a> - conmon, but in Rust.
+
+### containerd-runtime-shim
+
+<a href="https://github.com/containerd/containerd/blob/main/runtime/v2/README.md">containerd-runtime-shim</a> - "A first class shim API [and a few implementations] for runtime authors to integrate with containerd."
+
+### 🎓 shimmy
+
+<a href="https://github.com/iximiuz/shimmy">shimmy</a> - a toy container runtime shim written for educational purposes. Part of the **conman** project.
+
+
 ## Introspection and debugging tools
 
 ### cdebug
@@ -186,6 +186,28 @@ A kubectl plugin to get shell access to scratch containers, stream logs from mul
 ### ⚠️ amicontained
 
 <a href="https://github.com/genuinetools/amicontained">amicontained</a> - "Container introspection tool. Find out what container runtime is being used as well as features available."
+
+
+## In-container init systems
+
+### ⭐ tini
+
+<a href="https://github.com/krallin/tini">tini</a> - "A tiny but valid `init` for containers."
+
+Tini is meant to be run in a container - it spawns a single child and waits for it to exit all the while reaping zombies and performing signal forwarding. Written in C, and comes in both, dynamically and statically linked, forms.
+
+### dumb-init
+
+<a href="https://github.com/yelp/dumb-init">dumb-init</a> - "A minimal init system for Linux containers."
+
+A simple process supervisor and init system designed to run as PID 1 inside minimal container environments. It is deployed as a small, statically-linked binary written in C.
+
+### 🧑‍🔬 pid1
+
+<a href="https://github.com/fpco/pid1">pid1</a> - "Do signal handling and orphan reaping for Unix PID1 init processes."
+
+A Haskell library, and an executable based on that library, for initializing signal handlers, spawning child processes, and reaping orphan processes.
+
 
 ## Misc
 
