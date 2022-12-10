@@ -8,7 +8,7 @@ See also this [great summary of local container runtimes](https://docs.google.co
 
 <a href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a> - "The fastest way to containerize applications."
 
-At the heart of Docker Desktop is a <a href="https://github.com/linuxkit/linuxkit">LinuxKit</a> VM running Docker Engine and fronted by an electron (?) GUI. This architecture makes it work the same way on Windows, macOS, and Linux. Additionally, Docker Desktop comes bundled with a local Kubernetes cluster and a powerful mechanism of (graphical) extensions.
+At the heart of Docker Desktop is a <a href="https://github.com/linuxkit/linuxkit">LinuxKit</a> VM running (good old) Docker Engine and fronted by an (electron?) GUI. This architecture makes it work the same way on Windows, macOS, and Linux. Additionally, Docker Desktop comes bundled with a local Kubernetes cluster and a powerful mechanism of (GUI) extensions.
 
 ### Rancher Desktop
 
@@ -24,17 +24,13 @@ Similar to Docker Desktop but with more focus on local Kubernetes clusters (alth
 
 <a href="https://github.com/lima-vm/lima">Lima</a> - "Linux virtual machines, typically on macOS, for running containerd."
 
-### Colima
+Lima runs a QEMU virtual machine with a custom Linux distro inside that has containerd, BuildKit, and nerdctl preinstalled. It gives you close to Docker (Engine) experience on macOS (and Linux).
+
+### 🧑‍🔬 Colima
 
 <a href="https://github.com/abiosoft/colima">Colima</a> - "Container runtimes on macOS (and Linux) with minimal setup."
 
-### virt
-
-<a href="https://github.com/apinske/virt">virt</a> - "small Linux VM, ready to run containers, for macOS on ARM." Like Lima but for Podman and using the Apple Virtualization.framework instead of QEMU.
-
-### nerdctl
-
-<a href="https://github.com/containerd/nerdctl">nerdctl</a> - "contaiNERD CTL - Docker-compatible CLI for containerd, with support for Compose, Rootless, eStargz, OCIcrypt, IPFS, ..."
+Colima stands for "Cotainers in Lima" - the projects extends the standard Lima capabilities (see above) and makes it possible to run Docker Engine and Kubernetes (powered by?) runtimes inside of a Linux virtual machine (createad by Lima) on macOS (and Linux).
 
 ### Finch
 
@@ -48,8 +44,18 @@ A minimal native client plus an opinionated distribution of other open source co
 
 Despite the name, <a href="https://minikube.sigs.k8s.io/docs/faq/#can-i-start-minikube-without-kubernetes-running">minikube can be used without Kubernetes!</a>. Running `minikube start --container-runtime=docker --no-kubernetes` gives you some sort of a Docker Desktop replacement. It also uses a lightweight VM to run Docker Engine and works perfectly fine on Windows, macOS (`arm` performance is poor though), and Linux.
 
+### 🧑‍🔬 virt
+
+<a href="https://github.com/apinske/virt">virt</a> - "small Linux VM, ready to run containers, for macOS on ARM." Like Lima but for Podman and using the Apple Virtualization.framework instead of QEMU.
+
 ### Vagrant + VirtualBox + Docker provisioner
 
 <a href="https://github.com/hashicorp/vagrant">Vagrant</a> - "a tool for building and distributing development environments."
 
 Vagrant is many things, but in particular it can be used as a handy VirtualBox frontend. With just <a href="https://developer.hashicorp.com/vagrant/docs/provisioning/docker">about 5 lines of config</a>, you can get a local VM with Docker Engine inside. Works the same way on Linux, Windows, and macOS, but no `arm` support is possible. Read more - <a href="https://iximiuz.com/en/posts/how-to-setup-development-environment/">Disposable Local Development Environments with Vagrant, Docker, and Arkade</a>.
+
+### nerdctl
+
+<a href="https://github.com/containerd/nerdctl">nerdctl</a> - "contaiNERD CTL - Docker-compatible CLI for containerd, with support for Compose, Rootless, eStargz, OCIcrypt, IPFS, ..."
+
+Not a full-blown container runtime, but worth an honorable mention.
