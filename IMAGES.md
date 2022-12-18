@@ -120,6 +120,11 @@ A collection of tools to support cross-compilation from Dockerfiles that underst
 
 The tool promises to help with following the image building best practices and produce (more) secure Docker images.
 
+### 🎓 Build Containers the Hard Way
+
+<a href="https://github.com/coollog/build-containers-the-hard-way">Build Containers the Hard Way</a> - "GitBook on the low-level details of building Docker containers."
+
+Like Kubernetes the Hard Way, but for building containers.
 
 ## Image Inspection
 
