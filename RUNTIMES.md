@@ -215,6 +215,12 @@ A Haskell library, and an executable based on that library, for initializing sig
 
 <a href="https://github.com/icy/bocker">icy/bocker</a> & <a href="https://github.com/p8952/bocker">p8952/bocker</a> - "Docker implemented in around 100 lines of bash."
 
+### 🎓 Gocker
+
+<a href="https://github.com/shuveb/containers-the-hard-way">Containers the hard way: Gocker</a> - "Learning about containers and how they work by creating them the hard way."
+
+Gocker is a "from scratch" implementation of the core functionalities of Docker - to provide an understanding of how exactly containers work at the Linux system call level. Written in Go.
+
 ### 🎓 contained.af
 
 <a href="https://github.com/genuinetools/contained.af">contained.af</a> - "A stupid game for learning about containers, capabilities, and syscalls."
