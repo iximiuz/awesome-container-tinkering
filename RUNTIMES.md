@@ -45,10 +45,6 @@ Partially systematized. Eventually, will include some commentary.
 
 <a href="https://github.com/containers/libkrun">libkrun</a> - "A dynamic library providing Virtualization-based process isolation capabilities." Can be used for adding VM-isolation capabilities to an OCI runtime like runc, crun, etc.
 
-### footloose
-
-<a href="https://github.com/weaveworks/footloose">footloose</a> - "Container Machines - Containers that look like Virtual Machines." hose containers run systemd as PID 1 and a ssh daemon that can be used to login into the container. Such "machines" behave very much like a VM, it's even possible to run dockerd in them.
-
 ### bubblewrap
 
 <a href="https://github.com/containers/bubblewrap">bubblewrap</a> - "Unprivileged sandboxing tool."
@@ -120,6 +116,12 @@ Partially systematized. Eventually, will include some commentary.
 <a href="https://github.com/sadaszewski/focker">Focker</a> - "A FreeBSD image/jail orchestration tool in the vein of Docker."
 
 A Docker-like tool written in Python and using FreeBSD jails instead of Linux namespaces & co.
+
+### footloose
+
+<a href="https://github.com/weaveworks/footloose">footloose</a> - "Container Machines - Containers that look like Virtual Machines."
+
+Regular containers but with systemd as PID 1 and an SSH daemon inside. Such "machines" behave very much like a VM, it's even possible to run dockerd in them.
 
 
 ## Container-runtime shims
