@@ -56,11 +56,15 @@ The `bake` command supports building images (<a href="https://iximiuz.ck.page/po
 
 ### ko
 
-<a href="https://github.com/ko-build/ko">ko</a> - "Build and deploy Go applications on Kubernetes."
+<a href="https://github.com/ko-build/ko">ko</a> - "Build and deploy Go applications." `ko` is a simple (no Dockerfiles required) container image builder for Go application without any/many dependencies on the OS base image (e.g., no cgo, no OS package dependencies).
+
+### no
+
+<a href="https://github.com/thesayyn/no">no</a> - "Easy NodeJS containers." Like `ko` but for NodeJS.
 
 ### Jib
 
-<a href="https://github.com/GoogleContainerTools/jib">Jib</a> - "Build container images for your Java applications."
+<a href="https://github.com/GoogleContainerTools/jib">Jib</a> - "Build container images for your Java applications." Like `ko` but for Java - build optimized Docker (or OCI) images for Java applications without a Docker daemon. Available as plugins for Maven and Gradle and as a Java library.
 
 ### ⚠️ 👨‍🔬 kim
 

@@ -31,7 +31,11 @@ Partially systematized. Eventually, will include some commentary.
 
 ### gVisor
 
-<a href="https://github.com/google/gvisor">gVisor</a> - "Application Kernel for Containers." gVisor is an application kernel, written in Go, that implements a substantial portion of the Linux system surface. It includes an Open Container Initiative (OCI) runtime called runsc that provides an isolation boundary between the application and the host kernel. The runsc runtime integrates with Docker and Kubernetes, making it simple to run sandboxed containers.
+<a href="https://github.com/google/gvisor">gVisor</a> - "Application Kernel for Containers." gVisor is an application kernel (<a href="https://en.wikipedia.org/wiki/User-mode_Linux">User-mode Linux</a>), written in Go, that implements a substantial portion of the Linux system surface. It includes an Open Container Initiative (OCI) runtime called runsc that provides an isolation boundary between the application and the host kernel. The runsc runtime integrates with Docker and Kubernetes, making it simple to run sandboxed containers.
+
+### Quark
+
+<a href="https://github.com/QuarkContainer/Quark">Quark</a> - "A secure container runtime with CRI/OCI interface." Quark provides VM-level workload isolation and security with its own hypervisor (QVisor) and a guest kernel (QKernel) - yet another <a href="https://en.wikipedia.org/wiki/User-mode_Linux">User-mode Linux</a> implementation?
 
 ### Firecracker
 
@@ -52,6 +56,14 @@ Partially systematized. Eventually, will include some commentary.
 ### systemd-nspawn
 
 <a href="https://github.com/systemd/systemd/blob/main/src/nspawn/nspawn.c">systemd-nspawn</a> - "Like the chroot command, but it is a chroot on steroids." May be used to run a command or OS in a light-weight namespace container.
+
+### NsJail
+
+<a href="https://github.com/google/nsjail">NsJail</a> - "A light-weight process isolation tool, making use of Linux namespaces and seccomp-bpf syscall filters (with help of the kafel bpf language)."
+
+### Kuasar
+
+<a href="https://github.com/kuasar-io/kuasar">Kuasar</a> - "An efficient container runtime that provides cloud-native, all-scenario multiple sandbox container solutions." Kuasar is a _facade runtime_ that turns other runtimes into _sandboxers_ implementing the <a href="https://github.com/containerd/containerd/issues/4131">containerd Sandbox API</a>. Currently supported sandboxers: MicroVM (Cloud Hypervisor, StratoVirt and QEMU), App Kernel (gVisor and Quark), and Wasm (WasmEdge).
 
 
 ## Mid-level container runtimes
