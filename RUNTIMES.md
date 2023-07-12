@@ -205,6 +205,11 @@ A kubectl plugin to get shell access to scratch containers, stream logs from mul
 
 <a href="https://github.com/genuinetools/amicontained">amicontained</a> - "Container introspection tool. Find out what container runtime is being used as well as features available."
 
+### ig
+
+<a href="https://www.inspektor-gadget.io/docs/latest/ig/">ig</a> - "Collection of eBPF gadgets for containers."
+
+`ig` provides a set of eBPF gadgets that can be used to debug workloads running in containers. It supports multiple runtimes such as `Docker`, `containerd`, `CRI-O`, and `Podman`. The gadgets are classified into [different categories](https://www.inspektor-gadget.io/docs/latest/gadgets/) based on their use case, such as listing containers with the highest block IO or tracing DNS packets / exec system calls. 
 
 ## In-container init systems
 
