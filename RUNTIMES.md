@@ -135,16 +135,9 @@ A Docker-like tool written in Python and using FreeBSD jails instead of Linux na
 
 Regular containers but with systemd as PID 1 and an SSH daemon inside. Such "machines" behave very much like a VM, it's even possible to run dockerd in them.
 
-### OrbStack
-
-<a href="https://orbstack.dev/">OrbStack</a> - "Run Docker [containers] and Linux [VMs] on your Mac seamlessly and efficiently." It looks like a Docker Desktop alternative (but probably without the Docker Desktop extensions yet) with a bunch of appealing capabilities: promises to be fast(er), has a native macOS UI app, can run full-blown Intel and Apple Silicon Linux VMs with the ease of regular containers. Although it does have one big downside - it's not open-source (but seems to be free for the time being).
-
-### Rootbox
+### 👨‍🔬 Rootbox
 
 <a href="https://github.com/joaompinto/rootbox">Rootbox</a> - "An extremely simple and fast container engine for Linux and WSL, written in Python."
-
-
-
 
 
 ## Container-runtime shims

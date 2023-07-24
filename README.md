@@ -37,6 +37,7 @@ Over the years, I've accumulated tens of links to various container-related proj
 - ⭐ - widely-used/de facto standard solution
 - 👨‍🔬 - experimental project
 - 🎓 - edu/fun/toy project
+- 🤑 - requires a payment (even for personal use)
 - ⚠️ - project looks abandoned/unmaintained
 - 🪦 - project has been officially discontinued
 
