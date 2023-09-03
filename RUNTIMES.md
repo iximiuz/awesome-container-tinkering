@@ -201,6 +201,12 @@ A multi-purpose tool that in particular can run a shell session into your contai
 
 A kubectl plugin to get shell access to scratch containers, stream logs from multiple pods simultaneously, and do reverse port forwarding to Kubernetes clusters.
 
+### containerdbg
+
+<a href="https://github.com/google/containerdbg">containerdbg</a> - "Automate container debugging tasks."
+
+An "all-in-one" (more like "several-in-one" at the moment) CLI to help debug Kubernetes workloads with common issues that arise when moving legacy applications to containers. Can detect missing files (by tracking open file requests via Cilium's eBPF library), fs race conditions (when `rename` and `move` are assumed atomic), and failed network connections and static IP usage (via miekg's DNS tracing library). Written in C.
+
 ### ⚠️ amicontained
 
 <a href="https://github.com/genuinetools/amicontained">amicontained</a> - "Container introspection tool. Find out what container runtime is being used as well as features available."
