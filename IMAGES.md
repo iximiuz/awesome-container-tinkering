@@ -136,6 +136,12 @@ Like Kubernetes the Hard Way, but for building containers.
 
 <a href="https://github.com/wagoodman/dive">dive</a> - "A tool for exploring each layer in a docker image."
 
+### diffoci
+
+<a href="https://github.com/reproducible-containers/diffoci">diffoci</a> - "diff for Docker and OCI container images."
+
+The purpose is to improve the software supply chain security by, for instance, comparing images that were built locally with images pulled from a remote source like Docker Hub.
+
 ### container-diff
 
 <a href="https://github.com/GoogleContainerTools/container-diff">container-diff</a> - "Diff your Docker containers."
