@@ -94,11 +94,7 @@ Partially systematized. Eventually, will include some commentary.
 
 ### LXC
 
-<a href="https://github.com/lxc/lxc">LXC</a> - "Linux Containers." An alternative (i.e., non-OCI) implementation of containers using Linux OS-level virtualization primitives (namespaces, cgroups, etc). Daemonless, can work as a library or as a CLI tool. Back in 2013, Docker started as UX a layer on top of LXC but eventually moved to its own implementation (known as **runc** nowadays). Read this <a href="https://lwn.net/Articles/907613/">alternative story of containers on LWN.net for more</a>.
-
-### LXD
-
-<a href="https://github.com/lxc/lxd">LXD</a> - "Powerful system container and virtual machine manager." A daughter project of LCX. Like the Docker daemon, LXD is a daemon providing HTTP API to manage containers powered by LXC. LXD comes with a CLI client called _lxc_ (not to be confused with LXC's own CLI clients, though).
+<a href="https://github.com/lxc/lxc">LXC</a> - "Linux Containers." An alternative (i.e., non-OCI) implementation of containers using Linux OS-level virtualization primitives (namespaces, cgroups, etc). Daemonless, can work as a library or as a CLI tool. Back in 2013, Docker started as a UX layer on top of LXC but eventually moved to its own implementation (known as **libcontainer** & **runc** today). The key design difference between Docker and LXC is that the former focuses on single-purpose containers (i.e., one container - one application), while the latter tries to be a seamless replacement for traditional (potentially multi-tenant) Linux servers (VM or bare metal, doesn't matter). Read this <a href="https://lwn.net/Articles/907613/">alternative story of containers on LWN.net for more</a>.
 
 ### 🪦 rkt
 
@@ -121,7 +117,15 @@ Partially systematized. Eventually, will include some commentary.
 
 ### Podman
 
-<a href="https://github.com/containers/podman">podman</a> - "A tool for managing OCI containers and pods." Daemonless drop-in replacement for Docker (not quite).
+<a href="https://github.com/containers/podman">Podman</a> - "A tool for managing OCI containers and pods." Daemonless drop-in replacement for Docker (not quite).
+
+### LXD
+
+<a href="https://github.com/canonical/lxd">LXD</a> - "Powerful system container and virtual machine manager." Formerly a daughter project of LCX, it is now a Canonical project. Like the Docker daemon, LXD is a daemon that (in particular) provides HTTP API to manage containers powered by LXC. LXD comes with a CLI client called _lxc_ (not to be confused with LXC's own CLI clients, though).
+
+### Incus
+
+<a href="https://github.com/lxc/incus">Incus</a> - also a "Powerful system container and virtual machine manager." A community-led fork of Canonical's LXD (see above). Incus "is roughly equivalent to LXD but with a number of breaking changes on top of the obvious rename." While Incus promises to maintain backward compatibility (with itself) in its future versions, the early days of the fork are used as an opportunity to remove a lot of unused or problematic features of LXD.
 
 ### Focker
 
