@@ -130,6 +130,14 @@ The tool promises to help with following the image building best practices and p
 
 Like Kubernetes the Hard Way, but for building containers.
 
+### container2wasm
+
+<a href="https://github.com/ktock/container2wasm">container2wasm</a> - "Container to WASM converter."
+
+An image converter that enables running unmodified containers on WASM (various runtimes: wasmtime, wamr, wazero, and even in the browser).
+The tool creates a WASM image that runs the container (using the standard `runc` runtime) and the Linux kernel on the emulated (via Bochs or TinyEMU) CPU.
+
+
 ## Image Inspection
 
 ### dive
