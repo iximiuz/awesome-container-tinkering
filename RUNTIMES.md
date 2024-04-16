@@ -254,6 +254,12 @@ A Haskell library, and an executable based on that library, for initializing sig
 
 Gocker is a "from scratch" implementation of the core functionalities of Docker - to provide an understanding of how exactly containers work at the Linux system call level. Written in Go.
 
+### 🎓 barco
+
+<a href="https://github.com/lucavallin/barco">barco</a> - "Linux containers from scratch in C."
+
+Much like boker or Gocker but in C.
+
 ### 🎓 contained.af
 
 <a href="https://github.com/genuinetools/contained.af">contained.af</a> - "A stupid game for learning about containers, capabilities, and syscalls."
