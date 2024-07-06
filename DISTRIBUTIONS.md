@@ -1,24 +1,21 @@
-# Image Registries, Artifact Managment And Related Tools
-
-Here you can find information about image registries and general artifact management
+# Image Registries, Artifact Management, and Related Tools
 
 ## Image registries projects
 
 ### Docker Registry
 
-[Registry](https://docs.docker.com/registry/), the open source implementation for storing and distributing container images and other content, has been donated to the CNCF. Registry now goes under the name of Distribution, and the documentation has moved to [distribution project](https://github.com/distribution/distribution).
+[Registry](https://docs.docker.com/registry/), an open source implementation for storing and distributing container images and other content, has been donated to the CNCF. Registry now goes under the name of Distribution, and the documentation has moved to [distribution project](https://github.com/distribution/distribution).
 
 ### ⭐ Registries Reference Project Distribution
 
-<a href="https://github.com/distribution/distribution">distribution</a> - "The Registry is a stateless, highly scalable server side application that stores and lets you distribute container images and other content. The Registry is open-source, under the permissive Apache license." The reference implementation of the holly <a href="https://github.com/opencontainers/distribution-spec">OCI Distribution Specification</a>. Written in Go.
-
+<a href="https://github.com/distribution/distribution">distribution</a> - "The Registry is a stateless, highly scalable server-side application that stores and lets you distribute container images and other content. The Registry is open-source, under the permissive Apache license." The reference implementation of the <a href="https://github.com/opencontainers/distribution-spec">OCI Distribution Specification</a>. Written in Go.
 You can find a lot of helpful information at the [Distribution website](https://distribution.github.io/distribution/about/).
 
-## Artifact Managmenent
+## Artifact Management
 
 ### Harbor
 
-[harbor](https://goharbor.io) stands as an open-source registry, safeguarding artifacts through policies and role-based access control. It ensures that images undergo scanning to eliminate vulnerabilities and are signed as trusted. As a CNCF Graduated project, Harbor guarantees compliance, performance, and interoperability, enabling you to consistently and securely manage artifacts across cloud-native compute platforms such as Kubernetes and Docker.
+[harbor](https://goharbor.io) stands as an open-source registry, safeguarding artifacts through policies and role-based access control. It ensures that images undergo scanning to eliminate vulnerabilities and are signed as trusted. As a CNCF-graduated project, Harbor guarantees compliance, performance, and interoperability, enabling you to consistently and securely manage artifacts across cloud-native compute platforms such as Kubernetes and Docker.
 
 ### Artifact Hub
 
@@ -30,11 +27,11 @@ You have the option to utilize the official CNCF Artifact Hub at <a href="https:
 
 ### Nexus
 
-[Nexus Repository](https://help.sonatype.com/en/docker-registry.html) supports Docker registries with the Docker repository and OCI Image format for hosted and proxy repositories. You can expose these repositories to the client-side tools directly or as a repository group, which is a repository that merges and exposes the contents of multiple repositories in one convenient URL. The Nexus general artifact management solution for multiple package systems like, Helm Charts, Java/Maven, Go, PyPi, NpM, NuGet, R, RubyGems, Yum or raw artifacts.
+[Nexus Repository](https://help.sonatype.com/en/docker-registry.html) supports Docker registries with the Docker repository and OCI Image format for hosted and proxy repositories. You can expose these repositories to the client-side tools directly or as a repository group, which is a repository that merges and exposes the contents of multiple repositories in one convenient URL. The Nexus general artifact management solution for multiple package systems like Helm Charts, Java/Maven, Go, PyPi, NpM, NuGet, R, RubyGems, Yum, or raw artifacts.
 
 ### Artifactory
 
-[JFrog Artifactory](https://jfrog.com/de/artifactory/) is the comprehensive solution for storing and overseeing all your artifacts, binaries, packages, files, containers, and components, essential for your software supply chain.
+[JFrog Artifactory](https://jfrog.com/de/artifactory/) is a comprehensive solution for storing and overseeing all your artifacts, binaries, packages, files, containers, and components essential for your software supply chain.
 
 As the central hub for DevOps, JFrog Artifactory seamlessly integrates with your existing tools and processes, enhancing automation, ensuring integrity, and fostering best practices throughout your workflow.
 
@@ -50,7 +47,7 @@ As the central hub for DevOps, JFrog Artifactory seamlessly integrates with your
 
 ### GHCR
 
-The [Github Container registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry) stores container images within your organization or personal account, and allows you to associate an image with a repository. You can choose whether to inherit permissions from a repository, or set granular permissions independently of a repository. You can also access public container images anonymously. You can also store other package systems like RubyGems, npm, Maven/Gradle, NUGET artifacts.
+The [Github Container registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry) stores container images within your organization or personal account and allows you to associate an image with a repository. You can choose whether to inherit permissions from a repository or set granular permissions independently of a repository. You can also access public container images anonymously. You can also store other package systems like RubyGems, npm, Maven/Gradle, and NUGET artifacts.
 
 The [Homebrew project](https://brew.sh) hosts macOS and Linux bottles](https://docs.brew.sh/Bottles) on its platform :)
 
@@ -74,7 +71,7 @@ The mission of [Quay](https://quay.io) is store your containers securely. Ensure
 
 ### skopeo
 
-<a href="https://github.com/containers/skopeo">skopeo</a> - "Work with remote images registries - retrieving information, images, signing content."
+<a href="https://github.com/containers/skopeo">skopeo</a> - "Work with remote image registries - retrieving information, images, signing content."
 
 ### go-containerregistry/crane
 
@@ -94,7 +91,7 @@ A client interface to interact with registries: inspect images w/o pulling, list
 
 <a href="https://oras.land/">ORAS</a> - "Push and pull OCI Artifacts to and from OCI Registries."
 
-Since the invention of OCI registries, people have been (ab)using them to store non-container things (Helm charts, OPA policies, even video files can be stored this way). The modern registries are evolving as generic artifact stores, and the ORAS project provides a way to push and pull OCI Artifacts (read _arbitrary files_) to and from OCI Registries. The project consists of a CLI (<a href="https://github.com/oras-project/oras">_oras_</a>) and libraries (<a href="https://github.com/oras-project/oras-go">Go</a>, <a href="https://github.com/oras-project/oras-py">Python</a>).
+Since the invention of OCI registries, people have been (ab)using them to store non-container things (Helm charts, OPA policies, and even video files can be stored this way). The modern registries are evolving as generic artifact stores, and the ORAS project provides a way to push and pull OCI Artifacts (read _arbitrary files_) to and from OCI Registries. The project consists of a CLI (<a href="https://github.com/oras-project/oras">_oras_</a>) and libraries (<a href="https://github.com/oras-project/oras-go">Go</a>, <a href="https://github.com/oras-project/oras-py">Python</a>).
 
 ### 🧑‍🔬 Docker Hub Tool
 
@@ -104,7 +101,7 @@ A CLI tool for interacting with the Docker Hub. Get information about your image
 
 ### Helm
 
-[Helm](https://helm.sh) stands as a package manager tailored for Kubernetes environments, streamlining the deployment process of applications and services within Kubernetes clusters. Its primary advantage lies in simplifying the orchestration of complex deployments, particularly those that are highly repeatable or needed across diverse scenarios. By providing a structured approach to managing Kubernetes manifests and configurations, Helm empowers users to efficiently package, version, and deploy their applications, fostering consistency and scalability across Kubernetes deployments.
+[Helm](https://helm.sh) is a package manager tailored for Kubernetes environments, streamlining the deployment process of applications and services within Kubernetes clusters. Its primary advantage lies in simplifying the orchestration of complex deployments, particularly those that are highly repeatable or needed across diverse scenarios. By providing a structured approach to managing Kubernetes manifests and configurations, Helm empowers users to efficiently package, version, and deploy their applications, fostering consistency and scalability across Kubernetes deployments.
 
 ### Trivy
 
@@ -124,10 +121,10 @@ A CLI tool for interacting with the Docker Hub. Get information about your image
 
 ### Notary
 
-The [notary](https://github.com/notaryproject/notary) client and server leverage The [Update Framework (TUF)](https://theupdateframework.io), a robust and secure framework designed to address the challenges of software distribution and updates. Rooted in a strong foundation of security principles, TUF provides a comprehensive solution for ensuring the integrity and authenticity of software packages throughout their lifecycle. By implementing TUF within the notary client and server, users benefit from a proven, standardized approach to securing software distribution, safeguarding against various threats such as tampering, supply chain attacks, and unauthorized modifications.
+The [notary](https://github.com/notaryproject/notary) client and server leverage The [Update Framework (TUF)](https://theupdateframework.io), a robust and secure framework designed to address the challenges of software distribution and updates. Rooted in a strong foundation of security principles, TUF provides a comprehensive solution for ensuring the integrity and authenticity of software packages throughout their lifecycle. By implementing TUF within the notary client and server, users benefit from a proven, standardized approach to securing software distribution and safeguarding against various threats such as tampering, supply chain attacks, and unauthorized modifications.
 
 ### OpenPubKey
 
-[OpenPubkey](https://github.com/openpubkey/openpubkey) introduces a groundbreaking protocol that harnesses the capabilities of OpenID Providers (OPs) to establish secure bindings between identities and public keys. By extending OpenID Connect (OIDC), OpenPubkey facilitates the inclusion of user- or workload-generated public keys, empowering identities to authenticate and sign messages or artifacts within the OIDC ecosystem. This innovative approach enhances security and trust, enabling seamless integration of identity management with cryptographic operations, and fostering a more robust foundation for secure communication and transactions. 
+[OpenPubkey](https://github.com/openpubkey/openpubkey) introduces a groundbreaking protocol that harnesses the capabilities of OpenID Providers (OPs) to establish secure bindings between identities and public keys. By extending OpenID Connect (OIDC), OpenPubkey facilitates the inclusion of user- or workload-generated public keys, empowering identities to authenticate and sign messages or artifacts within the OIDC ecosystem. This innovative approach enhances security and trust, enabling seamless integration of identity management with cryptographic operations and fostering a more robust foundation for secure communication and transactions. 
 
 In 2023, Docker Inc. announced their adoption of the [OpenPubKey](https://www.docker.com/blog/signing-docker-official-images-using-openpubkey/) project to bolster their Secure Build Pipeline Solution. This strategic move underscores their commitment to enhancing security within their ecosystem by leveraging the capabilities of OpenPubKey to fortify identity management and cryptographic operations throughout the build pipeline.
