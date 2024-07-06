@@ -1,15 +1,15 @@
 # Awesome Container Tinkering
 
-An ever growing list of tools to tinker with containers.
+An ever-growing list of tools to tinker with containers.
 
 ## Project
 
-Not an [awesome-docker](https://github.com/veggiemonk/awesome-docker) list. Instead of being beginner-focused all-encompassing list of resources to get into containers, this project will be collecting links to (and thoughts about):
+Not an [awesome-docker](https://github.com/veggiemonk/awesome-docker) list. Instead of being a beginner-focused all-encompassing list of resources to get into containers, this project will be collecting links to (and thoughts about):
 
 - Lower-level building blocks (runtimes, libraries, CLIs)
 - Solutions for running containers locally and remotely
 - Helper tools and libraries to inspect, edit, or move images
-- In-depth write-ups and video resources on the above.
+- In-depth write-ups and video resources on the above topics.
 
 The project is WIP. The current list of categories includes:
 
@@ -17,12 +17,13 @@ The project is WIP. The current list of categories includes:
 - [Image builders, viewers, editors](./IMAGES.md)
 - [Development environments](./ENVIRONMENTS.md)
 - [Container networking tools](./NETWORKING.md)
+- [Image distribution and artifact management](./DISTRIBUTIONS.md)
 - [Interesting GitHub organizations](./ORGANIZATIONS.md)
 - [Container Standards and Specifications](./SPECIFICATIONS.md)
 
 ## Audience
 
-Everyone should be able to find something useful here, but to get the most out of it you'd probably need some prior familiarity with Docker (or alike). Potential target audience:
+Everyone should be able to find something useful here, but to get the most out of it you'd probably need some prior familiarity with Docker (or the like). Potential target audience:
 
 - Infrastructure folks (DevOps, SREs, System Administrators)
 - Developers of Cloud Native tools
