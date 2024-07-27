@@ -2,7 +2,6 @@
 
 Partially systematized. Eventually, will include some commentary.
 
-
 ## Low-level container runtimes
 
 ### ⭐ runc
@@ -65,6 +64,17 @@ Partially systematized. Eventually, will include some commentary.
 
 <a href="https://github.com/kuasar-io/kuasar">Kuasar</a> - "An efficient container runtime that provides cloud-native, all-scenario multiple sandbox container solutions." Kuasar is a _facade runtime_ that turns other runtimes into _sandboxers_ implementing the <a href="https://github.com/containerd/containerd/issues/4131">containerd Sandbox API</a>. Currently supported sandboxers: MicroVM (Cloud Hypervisor, StratoVirt and QEMU), App Kernel (gVisor and Quark), and Wasm (WasmEdge).
 
+### urunc
+
+<a href="https://github.com/nubificus/urunc">urunc</a> - "The urunc is a bridge that fill the gap between traditional unikernels and containerized environments, enabling seamless integration with cloud-native architectures". Urunc is designed to fully leverage the container semantics and benefit from the OCI tools and methodology, urunc aims to become "runc for unikernels", while offering compatibility with the Container Runtime Interface (CRI). By relying on underlying hypervisors, urunc launches unikernels provided by OCI-compatible images, allowing developers and administrators to package, deliver, deploy, and manage their software using familiar cloud-native practices.
+
+You can find more about the design and concept at the following <a href="https://static.sched.com/hosted_files/kccnceu2024/af/NUBIS-Unikernels-k8s-Knative.pdf">KubeCon 2024 talk</a>
+
+### Contrast
+
+Contrast runs confidential container deployments on Kubernetes at scale.
+
+ <a href="https://github.com/edgelesssys/contrast">Contrast</a> is based on the <a href="https://github.com/kata-containers/kata-containers">Kata Containers</a> and Confidential Containers projects. Confidential Containers are Kubernetes pods that are executed inside a confidential micro-VM and provide strong hardware-based isolation from the surrounding environment. This works with unmodified containers in a lift-and-shift approach. Contrast currently targets the  <a href="https://learn.microsoft.com/en-us/azure/confidential-computing/confidential-containers-on-aks-preview">CoCo preview on AKS</a>.
 
 ## Mid-level container runtimes
 
