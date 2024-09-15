@@ -225,6 +225,10 @@ An open-source registry implementation for storing and distributing container im
 
 A client interface to interact with registries: inspect images w/o pulling, list repository's tags, list registry's repositories (if supported), efficiently copy images between repositories, import/export OCI and Docker images, etc. Seems to be written from scratch with just a few dependencies.
 
+### ⚠️ reg
+
+<a href="https://github.com/genuinetools/reg">reg</a> - "Docker registry v2 command line client and repo listing generator with security checks." The project looks abandoned.
+
 ### OCI Registry Artifact Storage (ORAS)
 
 <a href="https://oras.land/">ORAS</a> - "Push and pull OCI Artifacts to and from OCI Registries."
