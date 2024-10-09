@@ -1,15 +1,21 @@
 # Image Registries, Artifact Management, and Related Tools
 
-## Image registries projects
+## Container registries
+
+### ⭐ Distribution - Reference registry implementation
+
+<a href="https://github.com/distribution/distribution">distribution</a> - "The Registry is a stateless, highly scalable server-side application that stores and lets you distribute container images and other content. The Registry is open-source, under the permissive Apache license." The reference implementation of the <a href="https://github.com/opencontainers/distribution-spec">OCI Distribution Specification</a>. Written in Go.
+You can find a lot of helpful information at the [Distribution website](https://distribution.github.io/distribution/about/).
 
 ### Docker Registry
 
 [Registry](https://docs.docker.com/registry/), an open source implementation for storing and distributing container images and other content, has been donated to the CNCF. Registry now goes under the name of Distribution, and the documentation has moved to [distribution project](https://github.com/distribution/distribution).
 
-### ⭐ Registries Reference Project Distribution
+### 🧑‍🔬 oci-registry
 
-<a href="https://github.com/distribution/distribution">distribution</a> - "The Registry is a stateless, highly scalable server-side application that stores and lets you distribute container images and other content. The Registry is open-source, under the permissive Apache license." The reference implementation of the <a href="https://github.com/opencontainers/distribution-spec">OCI Distribution Specification</a>. Written in Go.
-You can find a lot of helpful information at the [Distribution website](https://distribution.github.io/distribution/about/).
+<a href="https://github.com/mcronce/oci-registry">oci-registry</a> - an implementation of the OCI Registry spec with filesystem and S3 storage back-ends.
+
+Pull-through cache for any registry (not just `docker.io`), two storage back-ends, and a small footprint. May or may not be OCI Distribution Spec conformant.
 
 ## Artifact Management
 
@@ -63,7 +69,7 @@ The [Google Container Registry](https://cloud.google.com/artifact-registry) is d
 
 [Amazon Elastic Container Registry](https://aws.amazon.com/ecr/) (Amazon ECR) is a fully managed container registry that provides high-performance hosting, allowing you to reliably deploy application images and artifacts anywhere.
 
-### quay.io
+### Quay.io
 
 The mission of [Quay](https://quay.io) is store your containers securely. Ensure your apps are stored privately, with access that you control. Quay is teamwork optimized, with powerful access controls. It use offen by Red Hat based project like podman or RKT.
 
