@@ -10,16 +10,21 @@ Not an [awesome-docker](https://github.com/veggiemonk/awesome-docker) list. Inst
 - Solutions for running containers locally and remotely
 - Helper tools and libraries to inspect, edit, or move images
 - In-depth write-ups and video resources on the above topics.
+- Tools that support the container development.
 
 The project is WIP. The current list of categories includes:
 
 - [Container runtimes](./RUNTIMES.md)
 - [Image builders, viewers, editors](./IMAGES.md)
+- [Artifact Distributors](./ARTIFACT-DISTRIBUTORS.md)
 - [Development environments](./ENVIRONMENTS.md)
 - [Container networking tools](./NETWORKING.md)
 - [Image distribution and artifact management](./DISTRIBUTIONS.md)
 - [Interesting GitHub organizations](./ORGANIZATIONS.md)
 - [Container Standards and Specifications](./SPECIFICATIONS.md)
+- [Container Tools](./TOOLS.md)
+- [Container OS](./CONTAINER-OS.md)
+- [Kubernetes](./KUBERNETES.md)
 
 ## Audience
 

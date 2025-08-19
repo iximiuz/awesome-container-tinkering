@@ -2,6 +2,8 @@
 
 ## Base images
 
+* [Artifact Distributors](./ARTIFACT-DISTRIBUTORS.md)
+
 ### Distroless 1.0
 
 <a href="https://github.com/GoogleContainerTools/distroless">distroless</a> - "Language focused docker images, minus the operating system" _aka_ "scratch for everyone else." 
@@ -77,6 +79,14 @@ The tool consists of a builder backend (BuildKit daemon bound to the kubelet's u
 <a href="https://github.com/hashicorp/packer">Packer</a> - "A tool for creating identical machine images for multiple platforms from a single source configuration."
 
 Packer is primarily focused on producing virtual machine images but it also allows building Docker, LXC, and LXD images using a similar to VM-provisioning procedure (read, by putting shell commands into a HCL file).
+
+### ImageBuilder
+
+<a href="https://github.com/kubernetes-sigs/image-builder">Image Builder</a> - "is a tool designed to create Kubernetes virtual machine images compatible with various infrastructure providers. These VM images are primarily intended for use with Cluster API but are also suitable for other setups that rely on Kubeadm."
+
+The project utilizes Packer and Ansible to automate the image creation process, ensuring consistency and repeatability across different environments. It supports multiple operating systems and cloud platforms, enabling users to customize images according to their specific requirements.
+
+* [ImageBuilder Quickstart](https://image-builder.sigs.k8s.io/capi/quickstart)
 
 ### Cloud Native Buildpacks
 
@@ -191,13 +201,11 @@ By just specifying the image name in the path like <a href="https://ima.ge.cx/ng
 
 <a href="https://github.com/opencontainers/umoci">umoci</a> - "umoci modifies Open Container images."
 
-
 ## Image Optimization
 
 ### DockerSlim
 
 <a href="https://github.com/docker-slim/docker-slim">DockerSlim</a> - "Don't change anything in your Docker container image and minify it by up to 30x (and for compiled languages even more)."
-
 
 ## Image Distribution
 
@@ -241,8 +249,61 @@ Since the invention of OCI registries, people have been (ab)using them to store 
 
 A CLI tool for interacting with the Docker Hub. Get information about your images from the terminal. Docker's experiment to build a Docker Hub CLI tool. The intention of this project is to get user feedback and then to add this functionality to the Docker CLI itself.
 
+## ContainerD Snapshotter
 
-## Libraries
+A [Containerd Snapshotter](https://github.com/containerd/containerd/blob/main/docs/snapshotters/README.md) is a crucial component in containerized environments, responsible for managing container image layers and filesystem snapshots with high efficiency. It leverages a copy-on-write (CoW) mechanism, which minimizes storage usage by allowing containers to share common layers while enabling rapid container startup. Snapshotters support a wide variety of backend implementations, including popular ones like overlayfs, devmapper, zfs, blockfile, btrfs, native vfs, and erofs. Additionally, there are support options for non-standard, remote plugins such as fuse-overlayfs, nydus-snapshotter, nix-snapshotter, as well as cloud service-specific snapshotters, providing extensive flexibility tailored to different system and infrastructure requirements. This diversity enables containerized applications to be deployed efficiently across various platforms, optimizing performance and storage management.
+
+A great overview of containerd image handling can be found in the blog post by Samuel Karp:
+
+[Containerd Internals: Images](https://samuel.karp.dev/blog/2024/12/containerd-internals-images/)
+
+### OverlayFS
+
+The standard overlayfs snapshotter in containerd uses OverlayFS to provide a copy-on-write (CoW) filesystem, enabling efficient storage and fast container startup. It layers image data dynamically, reducing duplication and improving performance. This is the default snapshotter for most Linux environments due to its simplicity and kernel-level integration.
+
+### DevMapper
+
+The [devmapper snapshotter](https://github.com/containerd/containerd/blob/main/docs/snapshotters/devmapper.md) in containerd leverages Device Mapper to provide thin-provisioned snapshots for container storage. It supports XFS and EXT4 filesystems, enabling efficient space usage and faster provisioning. This snapshotter is ideal for environments requiring persistent storage, strong isolation, and optimized disk utilization.
+
+### ZFS snapshotter
+
+[ZFS Snapshotter](https://github.com/containerd/zfs) is a containerd snapshotter that utilizes the ZFS filesystem to manage container images with advanced features like efficient snapshots, data integrity, and compression. It leverages ZFS's ability to handle large volumes of data and support copy-on-write (CoW) for optimized storage and performance. This snapshotter is ideal for environments requiring high reliability, data protection, and scalability.
+
+### Nydus snapshotter
+
+[Nydus Snapshotter](https://github.com/containerd/nydus-snapshotter) is a high-performance containerd snapshotter that enables data deduplication and lazy loading for container images. It uses a P2P distribution model, reducing storage and network overhead by loading only required data chunks on demand. This optimizes container startup times and enhances efficiency in large-scale deployments.
+
+### FUSE-OverlayFS snapshotter
+
+[fuse-overlayfs-snapshotter](https://github.com/containerd/fuse-overlayfs-snapshotter) is a snapshotter for containerd that leverages FUSE-based overlayfs, enabling unprivileged containers to use overlay filesystems without requiring kernel support. It improves compatibility in environments where native overlayfs is restricted, such as rootless containers. This enhances flexibility and security while maintaining efficient image storage and layering.
+
+### Stargz snapshotter
+
+[Stargz Snapshotter](https://github.com/containerd/stargz-snapshotter) is a containerd snapshotter that enables lazy loading of container images using eStargz format. It reduces startup time by fetching only necessary data on demand, improving efficiency in large-scale deployments. This snapshotter is ideal for speeding up container boot times, especially in cloud and edge environments.
+
+### Overlaybd snapshotter
+
+Accelerated Container Image (ACI) is a [containerd snapshotter](https://github.com/containerd/accelerated-container-image) designed for fast container startup by leveraging lazy loading and on-demand decompression. It optimizes image distribution by fetching only required data, reducing I/O overhead. This improves efficiency in cloud-native environments, especially for large-scale and high-performance workloads.
+
+At the heart of the acceleration is overlaybd, which is a new remote image format based on block device. Overlaybd backstore provides a merged view of a sequence of block-based layers in userspace and outputs as a virtual blocks device through [TCMU](https://www.kernel.org/doc/Documentation/target/tcmu-design.txt). It can be used for container acceleration by supporting fetching image data on-demand without downloading and unpacking the whole image before a container running. With overlaybd image format, we can cold start a container instantly.
+
+### NIX snapshotter
+
+[Nix-snapshotter](https://github.com/pdtpartners/nix-snapshotter) enables Kubernetes to use Nix store paths as container images, bypassing traditional image layers and registries. It integrates with CRI to fetch packages from a Nix binary cache or build them dynamically while maintaining compatibility with standard OCI images. This approach ensures fully declarative and reproducible Kubernetes deployments.
+
+### GKE Image Streaming snapshotter
+
+[GKE Image Streaming](https://cloud.google.com/kubernetes-engine/docs/how-to/image-streaming?hl=de) allows Google Kubernetes Engine (GKE) to pull container images directly from the Google Cloud Storage (GCS) or other cloud repositories, reducing the need for a Docker registry. It supports snapshotted images, enabling efficient image management and faster deployments by leveraging cloud-native image distribution. This feature optimizes image delivery, enhances performance, and simplifies container management in Kubernetes clusters.
+
+### AKS Artifact Streaming snapshotter
+
+[Artifact Streaming](https://learn.microsoft.com/en-us/azure/aks/artifact-streaming) in Azure Kubernetes Service (AKS) enables efficient streaming of container images and other artifacts directly from Azure Container Registry (ACR) to AKS clusters. This approach minimizes storage overhead and improves image pull times by streaming images on-demand rather than pulling them fully at once. It enhances deployment speed and scalability in cloud-native environments by reducing resource usage and optimizing image distribution across clusters.
+
+### AWS snapshotter
+
+The [AWS Snapshotter](https://aws.amazon.com/de/blogs/aws/aws-fargate-enables-faster-container-startup-using-seekable-oci/) leverages Seekable OCI (SOCI) to accelerate container startup times on AWS Fargate by enabling on-demand streaming of container image layers. This approach reduces the need to fully download container images before execution, allowing for faster initialization and more efficient resource usage. SOCI enhances performance, especially for large images, by allowing containers to start quickly while retrieving only the required image data as needed.
+
+## Image Libraries
 
 ### go-containerregistry
 

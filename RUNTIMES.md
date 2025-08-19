@@ -16,6 +16,10 @@ Partially systematized. Eventually, will include some commentary.
 
 <a href="https://github.com/containers/youki">youki</a> - "A container runtime written in Rust." Same as above, but in Rust.
 
+### Syd-OCI
+
+<a href="https://gitlab.exherbo.org/sydbox/sydbox">syd OCI</a> - "A secure OCI container runtime" for Linux systems (version 5.19 and above). Syd-OCI seamlessly integrates the advanced sandboxing capabilities of Syd -- our rock-solid unikernel designed for sandboxing applications -- into containerized environments by leveraging Youki, a modern container runtime written in Rust.
+
 ### runj
 
 <a href="https://github.com/samuelkarp/runj">runj</a> - "An experimental, proof-of-concept OCI-compatible runtime for FreeBSD jails."
@@ -75,6 +79,19 @@ More about the design and concept <a href="https://static.sched.com/hosted_files
 <a href="https://github.com/edgelesssys/contrast">Contrast</a> - "Deploy and manage confidential containers on Kubernetes."
 Confidential Containers are Kubernetes Pods that are executed inside specialized microVMs, which provide strong hardware-based isolation from the surrounding environment. Contrast works with unmodified OCI containers in a lift-and-shift approach. The project is based on <a href="https://github.com/kata-containers/kata-containers">Kata Containers</a> and <a href="https://github.com/confidential-containers">Confidential Containers</a>, and it currently targets the <a href="https://learn.microsoft.com/en-us/azure/confidential-computing/confidential-containers-on-aks-preview">CoCo preview on AKS</a>.
 
+### ⚠️ crun-wasm
+
+<a href="https://github.com/bee42/crun-wasm">crun-wasm</a> - A runtime to combine wasm modules and normal crun runtimes. This experiment help people to integrate WASM into Kubernetes clusters. You can use normal process containers with wasm container at the same pod.
+
+### ⚠️ runu - µKontainer
+
+µKontainer <a href="https://github.com/ukontainer/runu">runu</a> supports runtimeClass to use alternate runtime instead of runc over CRI mechanism.
+µKontainer supports Linux containers on macOS and using LKL <a href="https://github.com/lkl">(Linux Kernel Library)</a>. More information you can find at this <a href="https://speakerdeck.com/thehajime/vee21-ukontainer">µKontainer slide deck</a> and this <a href="https://asciinema.org/a/347292">demo</a>.
+
+### ⚠️ embedshim
+
+The  <a href="https://github.com/fuweid/embedshim">embedshim</a> is the kind of task runtime implementation, which can be used as plugin in containerd.  This plugin aims to provide task runtime implementation with pidfd and eBPF sched_process_exit tracepoint to manage deamonless container with low overhead.
+
 ## Mid-level container runtimes
 
 ### ⭐ containerd
@@ -101,9 +118,12 @@ Confidential Containers are Kubernetes Pods that are executed inside specialized
 
 <a href="https://github.com/Mirantis/virtlet">virtlet</a> - "Kubernetes CRI implementation for running VM workloads."
 
+
+
 ### LXC
 
 <a href="https://github.com/lxc/lxc">LXC</a> - "Linux Containers." An alternative (i.e., non-OCI) implementation of containers using Linux OS-level virtualization primitives (namespaces, cgroups, etc). Daemonless, can work as a library or as a CLI tool. Back in 2013, Docker started as a UX layer on top of LXC but eventually moved to its own implementation (known as **libcontainer** & **runc** today). The key design difference between Docker and LXC is that the former focuses on single-purpose containers (i.e., one container - one application), while the latter tries to be a seamless replacement for traditional (potentially multi-tenant) Linux servers (VM or bare metal, doesn't matter). Read this <a href="https://lwn.net/Articles/907613/">alternative story of containers on LWN.net for more</a>.
+
 
 ### 🪦 rkt
 
@@ -152,6 +172,25 @@ Regular containers but with systemd as PID 1 and an SSH daemon inside. Such "mac
 
 <a href="https://github.com/joaompinto/rootbox">Rootbox</a> - "An extremely simple and fast container engine for Linux and WSL, written in Python."
 
+### Kubelet
+
+<a href="https://github.com/kubernetes/kubelet">Kubelet</a> -  "is an high level runtime component of the Kubernetes ecosystem. It works as a node-level agent to help with container management and orchestration within a Kubernetes cluster."
+
+Find more information to the Kubelet project:
+
+* [Kubernetes docs of Kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/)
+
+### Virtual-kubelet
+
+< a href="https://github.com/virtual-kubelet/virtual-kubelet">Virtual-kubelet</a> - "is is an Kubernetes kubelet implementation that masquerades as a kubelet for the purposes of connecting Kubernetes to other APIs. This allows the nodes to be backed by other services like ACI, AWS Fargate, IoT Edge, Tensile Kube"
+
+### MacOS-vz-kubelet
+
+<a href="https://github.com/agoda-com/macOS-vz-kubelet">macOS-vz-kubelet</a> - "is bridges the worlds of Kubernetes and native macOS workloads. It enables macOS hosts to act as Kubernetes nodes, allowing you to deploy and manage macOS Virtual Machines at scale. The project also supports running Docker containers alongside macOS VMs within the same Pod, providing flexibility for hybrid workloads."
+
+Find more information to the macOS-vz-kubelet project:
+
+* [Explain macOS-vz-kubelet ](https://medium.com/agoda-engineering/how-we-integrated-native-macos-workloads-with-kubernetes-b4d3c14881a0)
 
 ## Container-runtime shims
 
@@ -172,7 +211,6 @@ A piece of software that sits in between a low-level container runtime and a hig
 ### 🎓 shimmy
 
 <a href="https://github.com/iximiuz/shimmy">shimmy</a> - a toy container runtime shim written for educational purposes. Part of the **conman** project.
-
 
 ## Introspection and debugging tools
 
@@ -230,11 +268,35 @@ An "all-in-one" (more like "several-in-one" at the moment) CLI to help debug Kub
 
 `ig` provides a set of eBPF gadgets that can be used to debug workloads running in containers. It supports multiple runtimes such as `Docker`, `containerd`, `CRI-O`, and `Podman`. The gadgets are classified into [different categories](https://www.inspektor-gadget.io/docs/latest/gadgets/) based on their use case, such as listing containers with the highest block IO or tracing DNS packets / exec system calls. 
 
+### ⚠️ Kubeletctl
+
+<a href="https://github.com/cyberark/kubeletctl">Kubeletctl</a> - Ss a command line tool that implement kubelet's API."
+
+Part of kubelet's API is documented but most of it is not. This tool covers all the documented and undocumented APIs.
+
+### mirrord
+
+<a href="https://mirrord.dev/">Mirrord</a> - "is a lightweight tool that simplifies cloud testing 
+by allowing you to run your local code in the cloud."
+
+Mirrord works by mirroring traffic and environment 
+variables from a cloud environment to your local machine, enabling seamless cloud integration during development.  This approach allows early testing in production-like conditions, ensuring faster, safer iterations. Mirrord helps developers "shift left" by making cloud testing accessible from the very start of the development process.
+
+### telepresence
+
+<a href="https://www.telepresence.io">telepresence</a> - "is a tool for fast, local development of
+Kubernetes-based applications."
+
+Telepresence creates a two-way network proxy between a local development machine and a remote Kubernetes cluster. This allows developers to run services locally 
+while seamlessly interacting with cluster resources, enabling efficient testing and debugging. 
+Telepresence eliminates the need to build, push, or deploy code to a cluster during iterations, 
+speeding up development workflows.
+
 ## In-container init systems
 
 ### ⭐ tini
 
-<a href="https://github.com/krallin/tini">tini</a> - "A tiny but valid `init` for containers."
+<a href="https://github.com/krallin/tini">tini</a> - " is a tiny but valid `init` for containers."
 
 Tini is meant to be run in a container - it spawns a single child and waits for it to exit all the while reaping zombies and performing signal forwarding. Written in C, and comes in both, dynamically and statically linked, forms.
 
@@ -250,8 +312,11 @@ A simple process supervisor and init system designed to run as PID 1 inside mini
 
 A Haskell library, and an executable based on that library, for initializing signal handlers, spawning child processes, and reaping orphan processes.
 
-
 ## Misc
+
+### fassd
+
+<a href="https://github.com/openfaas/faasd">faasd</a> is OpenFaaS reimagined, but without the cost and complexity of Kubernetes. It runs on a single host with very modest requirements, making it fast and easy to manage. Under the hood it uses containerd and Container Networking Interface (CNI) along with the same core OpenFaaS components from the main project.
 
 ### 🎓 boker
 
@@ -272,3 +337,5 @@ Much like boker or Gocker but in C.
 ### 🎓 contained.af
 
 <a href="https://github.com/genuinetools/contained.af">contained.af</a> - "A stupid game for learning about containers, capabilities, and syscalls."
+
+

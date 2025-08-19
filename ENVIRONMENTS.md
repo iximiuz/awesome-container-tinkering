@@ -22,7 +22,7 @@ Similar to Docker Desktop but with more focus on local Kubernetes clusters (alth
 
 ### 🤑 OrbStack
 
-<a href="https://orbstack.dev/">OrbStack</a> - "Run Docker [containers] and Linux [VMs] on your Mac seamlessly and efficiently." It looks like a Docker Desktop alternative (but probably without the Docker Desktop extensions yet) with a bunch of appealing capabilities: promises to be fast(er), has a native macOS UI app, can run full-blown (and well integrated with the host) Intel and Apple Silicon Linux VMs with the ease of regular containers. Although it does have one big downside - it's not open-source (seems to be free for the time being, but the plans for eventual monetization were announced).
+<a href="https://orbstack.dev/">OrbStack</a> - "Run Docker [containers] and Linux [VMs] on your Mac seamlessly and efficiently." It looks like a Docker Desktop alternative (but probably without the Docker Desktop extensions yet) with a bunch of appealing capabilities: promises to be fast(er), has a native macOS UI app, can run full-blown (and well integrated with the host) Intel and Apple Silicon Linux VMs with the ease of regular containers. Although it does have one big downside - it's not open-source (seems to be free for the time being, but the plans for eventual monetization were announced)."
 
 ### Lima
 
