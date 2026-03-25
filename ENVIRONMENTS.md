@@ -64,6 +64,12 @@ Vagrant is many things, but in particular it can be used as a handy VirtualBox f
 
 More like "a simple way to run a Linux distro in a container". Distrobox uses Podman or Docker to create containers using the Linux distribution of your choice. The created container will be tightly integrated with the host, allowing sharing of the HOME directory of the user, external storage, external USB devices and graphical apps (X11/Wayland), and audio.
 
+### Mocker
+
+<a href="https://github.com/us/mocker">Mocker</a> - "Docker-compatible container CLI for macOS, built on Apple's Containerization framework."
+
+Mocker is an open-source (AGPL-3.0) container CLI written in Swift that provides Docker-compatible commands using Apple's native Containerization framework. It runs lightweight Linux VMs on macOS without requiring Docker Engine or a traditional Linux VM layer, offering a native macOS experience for container workflows.
+
 ### nerdctl
 
 <a href="https://github.com/containerd/nerdctl">nerdctl</a> - "contaiNERD CTL - Docker-compatible CLI for containerd, with support for Compose, Rootless, eStargz, OCIcrypt, IPFS, ..."
