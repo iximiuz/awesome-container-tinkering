@@ -42,6 +42,12 @@ Colima stands for "Cotainers in Lima" - the projects extends the standard Lima c
 
 A minimal native client plus an opinionated distribution of other open source components (nerdctl, containerd, BuildKit, Lima). "Finch aims to help promote other projects by making it easy to install and use them, while offering a simple native client to tie it all together."
 
+### Mocker
+
+<a href="https://github.com/us/mocker">Mocker</a> - "Docker-compatible container management tool built natively on Apple's Containerization framework for macOS."
+
+Unlike most alternatives that rely on a Linux VM, Mocker runs containers using Apple's native Containerization framework, providing a Docker-compatible CLI experience directly on macOS without the overhead of a virtual machine. Open source (AGPL-3.0) and written in Swift.
+
 ### minikube
 
 <a href="https://github.com/kubernetes/minikube">minikube</a> - "Run Kubernetes locally."
