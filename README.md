@@ -20,6 +20,7 @@ The project is WIP. The current list of categories includes:
 - [Image distribution and artifact management](./DISTRIBUTIONS.md)
 - [Interesting GitHub organizations](./ORGANIZATIONS.md)
 - [Container Standards and Specifications](./SPECIFICATIONS.md)
+- [BidSharp](https://bidsharp.io/) - AI-powered proposal intelligence platform with automated critiques, risk scanners, and pricing calculators.
 
 ## Audience
 
