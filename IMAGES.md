@@ -151,6 +151,10 @@ After booting on a server, such an image runs not in a container but as the host
 
 A similar idea to bootc, but tailored for edu purposes. Launch a base Linux container (Debian, Alpine, etc.), pull in Linux kernel & init system (systemd, OpenRC, etc.), dump container's filesystem to a disk image, install bootloader (syslinux) to this image, and convert it into a QEMU (or the like) VM image.
 
+### LayerSmith
+
+<a href="https://github.com/r0lfi/layersmith">LayerSmith</a> - Build OCI container images through a self-hosted web UI with Docker or Podman, editable Containerfiles, digest-pinned base images, and air-gap bundles.
+
 
 ## Image Inspection
 
