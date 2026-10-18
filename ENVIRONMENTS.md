@@ -69,3 +69,9 @@ More like "a simple way to run a Linux distro in a container". Distrobox uses Po
 <a href="https://github.com/containerd/nerdctl">nerdctl</a> - "contaiNERD CTL - Docker-compatible CLI for containerd, with support for Compose, Rootless, eStargz, OCIcrypt, IPFS, ..."
 
 Not a full-blown container runtime, but worth an honorable mention.
+
+### Yantr
+
+<a href="https://github.com/besoeasy/yantr">Yantr</a> - "A self-hosted app store that runs alongside your OS — not instead of it."
+
+A homelab-oriented app-store: deploys 130+ curated apps one-click as Podman Compose stacks, with each stack compiled into systemd Quadlet units under `~/.config/containers/systemd/`. Fully rootless — the platform itself runs as a container talking to the Podman user socket, and Docker-socket-expecting apps get the rootless socket translated in. Source-available (PolyForm Noncommercial): free for personal/homelab use.
